@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <title>General Search Results - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            margin-top: 20px;
+        }
+
+        .search-form {
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid red;
+
+
+        }
+
+        .search-text {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+
+            gap: 10px;
+            /* margin-right: 5px; */
+            margin-left: 5px;
+        }
+
+        .pincode {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            /* border: 2px solid red; */
+            gap: 10px;
+            margin-right: 5px;
+
+        }
+
+        .search-form button {
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            /* padding: 10px; */
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: auto;
+            width: 100%;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+
+        .search-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .serviceavilable {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .search-form {
+                width: 100%;
+                padding: 0 15px;
+                text-align: center;
+
+            }
+
+            .card-margin {
+                margin-bottom: 1rem;
+
+            }
+
+            .third,
+            .first {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 10px -10px;
+
+            }
+
+            .forth,
+            .fifth {
+                flex: 0 0 100%;
+                max-width: 100%;
+                /* border: 2px solid red; */
+            }
+
+            .second,
+            .first {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="second col-lg-12 card-margin">
+                <div class="card search-form">
+                    <div class="card-body p-0">
+                        <form id="search-form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row no-gutters">
+                                        <div class="third col-lg-3 first col-md-3 pincode-box col-sm-12 p-0">
+                                            <input type="text" placeholder="&#xf0f9 Search Pincode..."
+                                                class="form-control pincode" id="searchPincode" name="searchPincode"
+                                                oninput="checkServiceAvailability(this.value)">
+                                            <div id="serviceAvailability" class="serviceavilable"></div>
+                                        </div>
+
+                                        <div class="forth col-lg-8 fifth col-md-6 col-sm-12 p-0">
+                                            <input type="text" placeholder="Search..." class="form-control search-text"
+                                                id="search" name="search">
+                                        </div>
+                                        <div class="second col-lg-1 first col-md-3 col-sm-12 p-0">
+                                            <button type="submit" class="btn btn-base">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-search">
+                                                    <circle cx="11" cy="11" r="8"></circle>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function checkServiceAvailability(pincode) {
+        var availablePincodes = ['222001', '110096'];
+        var availableCities = ['jaunpur', 'delhi', 'bihar'];
+        var serviceAvailabilityDiv = document.getElementById('serviceAvailability');
+
+        // Check if the input is a valid 6-digit pincode or a valid city name
+        if (!/^\d{6}$/.test(pincode) && !availableCities.includes(pincode.toLowerCase())) {
+            serviceAvailabilityDiv.innerText = "Please enter a valid pincode or city name";
+            serviceAvailabilityDiv.style.color = "red";
+            return;
+        }
+
+        if (availablePincodes.includes(pincode)) {
+            serviceAvailabilityDiv.innerText = "Service Available";
+            serviceAvailabilityDiv.style.color = "green";
+        } else if (availableCities.includes(pincode.toLowerCase())) {
+            serviceAvailabilityDiv.innerText = "Service Available";
+            serviceAvailabilityDiv.style.color = "green";
+        } else {
+            serviceAvailabilityDiv.innerText = "Service Not Available We are Coming As Soon As Possible";
+            serviceAvailabilityDiv.style.color = "red";
+        }
+    }
+
+    </script>
+
+
+</body>
+
+</html>
