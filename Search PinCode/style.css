@@ -1,0 +1,103 @@
+     
+          body {
+               background: #f8f9fa;
+               margin-top: 20px;
+          }
+
+          .search-form {
+               width: 85%;
+               margin: 0 auto;
+               margin-top: 1rem;
+               background-color: #fff;
+               border-radius: 10px;
+               padding: 10px 15px;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               border: 2px solid red;
+
+
+          }
+
+          .search-text {
+               border: 1px solid #ced4da;
+               border-radius: 5px;
+               padding: 10px;
+               width: 100%;
+               box-sizing: border-box;
+               font-size: 16px;
+
+               gap: 10px;
+               /* margin-right: 5px; */
+               margin-left: 5px;
+          }
+
+          .pincode {
+               border: 1px solid #ced4da;
+               border-radius: 5px;
+               padding: 10px;
+               width: 100%;
+               box-sizing: border-box;
+               font-size: 16px;
+               /* border: 2px solid red; */
+               gap: 10px;
+               margin-right: 5px;
+
+          }
+
+          .search-form button {
+               border: none;
+               border-radius: 5px;
+               background-color: #007bff;
+               color: #fff;
+               /* padding: 10px; */
+               font-size: 12px;
+               cursor: pointer;
+               transition: background-color 0.3s;
+               margin: auto;
+               width: 100%;
+               margin-right: 5px;
+               margin-left: 10px;
+          }
+
+          .search-form button:hover {
+               background-color: #0056b3;
+          }
+
+          .serviceavilable {
+               margin-top: 5px;
+          }
+
+          @media (max-width: 768px) {
+               .search-form {
+                    width: 100%;
+                    padding: 0 15px;
+                    text-align: center;
+
+               }
+
+               .card-margin {
+                    margin-bottom: 1rem;
+
+               }
+
+               .third,
+               .first {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin: 10px -10px;
+
+               }
+
+               .forth,
+               .fifth {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    /* border: 2px solid red; */
+               }
+
+               .second,
+               .first {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+               }
+          }
+     
