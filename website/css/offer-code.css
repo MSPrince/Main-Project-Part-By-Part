@@ -1,0 +1,58 @@
+a {
+    text-decoration: none;
+}
+.offer-container{
+     padding-left: 10px;
+     /* border: 2px solid red; */
+     margin-top: 10px;
+}
+.offer-container h4{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.offer {
+    /* border: .5px solid gray; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Enable horizontal scrollbar */
+    padding: 10px;
+    margin-top: -10px;
+}
+
+.offer::-webkit-scrollbar {
+    display: none;
+    /* Hide default scrollbar */
+}
+
+.offer-img {
+    margin-right: 10px;
+}
+.offer-img img{
+    width: 70px;
+    border-radius: 5px;
+}
+
+.offer-card {
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    margin: 10px;
+    /* Added margin for spacing between cards */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    /* Added cursor pointer to indicate clickable */
+}
+
+
+
+.offer-detail p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: gray;
+}
