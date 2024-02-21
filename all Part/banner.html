@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  a{
+    text-decoration: none;
+  }
+ .membership-content {
+  background: linear-gradient(#4a148c, #311b92);  /* Gradient colors: Yellow to Orange */
+    /* border-radius: 10px; */
+    padding: 20px 20px 0 20px;
+    margin-top: 20px;
+    color: #fff; /* Text color: White */
+}
+
+.membership-content a {
+    color: #fff; /* Link color: White */
+}
+
+.membership-content a:hover {
+    color: #f9d423; /* Link hover color: Yellow */
+}
+
+  .bb-img {
+    background: url(PlusFamily.22677720.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 150px; /* Adjust height as needed */
+  }
+
+  @media (max-width: 768px) {
+    .bb-img {
+      height: 100px; /* Adjust height for smaller devices */
+      background-size: contain;
+      background-position: right bottom;
+      z-index: 675786876;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .bb-img {
+      display: none; /* Hide image on smaller devices */
+    }
+  }
+  .bbtn{
+    background-color: #f5b326;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="container-fluid membership-content">
+    <a href="#">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h5>Become a <span><img src="3864b471.svg" alt="" height="40px"></span> Member</h5>
+            <p>And enjoy extra savings on every order</p>
+            <hr>
+          </div>
+          <div class="col-md-5 col-sm-12 mb-2">
+            <p>Save 5% on medicine, 50% on 1st lab test & free delivery on plus membership. Know more ></p>
+            <button class="btn bbtn">Explore Now <i class="bi bi-fast-forward-circle-fill"></i></button>
+          </div>
+          <div class="col-md-3 bb-img"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

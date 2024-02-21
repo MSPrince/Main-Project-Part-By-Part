@@ -1,0 +1,564 @@
+/* ------------------------------------common css---------------------------------------- */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+     text-decoration: none;
+}
+
+/* ======================================navbar Start ====================================*/
+.topbar{
+    color: #178a86;
+}
+.nav-item a {
+    font-size: 14px;
+    font-weight: 700;
+    /* text-decoration: none; */
+}
+
+.nav-item a:hover{
+     color: #178a86;
+}
+
+.nav-item i{
+     color: #178a86;
+}
+.shipping{
+    text-decoration: none;
+}
+.mobNo , .mail{
+    color: black;
+}
+.superNav {
+    font-size: 13px;
+}
+
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.logo{
+  width: 220px;
+  height: 40px;
+}
+
+@media screen and (max-width:540px) {
+    .centerOnMobile {
+         text-align: center
+    }
+}
+/* ==================================navbar End ========================================*/
+
+
+/*------------------------------ upload prescription------------------------------ */
+   .upload-prescription{
+     /* border: 2px solid red; */
+     padding: 20px 0;
+     background: linear-gradient(#FFFFFF, #FFF0D2 , #E0F5FC , #FFFCF4);
+   }       
+.upload-precre {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 120px 5px 80px;
+            /* border: 2px solid red; */
+        }
+
+        .upload-precre div {
+            flex: 1;
+        }
+
+        .upload-precre div h4 {
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            text-decoration: none solid rgb(48, 54, 60);
+            word-spacing: 0px;
+        }
+
+        .upload-precre div p {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            text-decoration: none solid rgb(48, 54, 60);
+            word-spacing: 0px;
+            text-align: end;
+        }
+        .upload-precre div p a{
+          color: #178a86;
+          font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .upload-precre {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px;
+            }
+
+            .upload-precre div {
+                margin-bottom: 10px;
+            }
+
+            .upload-precre div p {
+                text-align: center;
+            }
+
+            .upload-precre div h4 {
+                text-align: center;
+            }
+        }
+
+        .form {
+            /* border: 2px solid red; */
+            width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+        .form .fa-search {
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #9ca3af;
+            /* border: 2px solid red; */
+
+        }
+
+        .form span {
+
+            position: absolute;
+            right: 17px;
+            top: 13px;
+            padding: 2px;
+            border-left: 1px solid #d1d5db;
+
+        }
+
+        .left-pan {
+            padding-left: 7px;
+        }
+
+        .left-pan i {
+
+            padding-left: 10px;
+        }
+
+        .form-input {
+            height: 55px;
+            text-indent: 33px;
+            border-radius: 10px;
+        }
+
+        .form-input:focus {
+            box-shadow: none;
+            border: none;
+        }
+
+        .form-input::placeholder {
+            color: gray;
+            transition: ease-in-out all .4s;
+        }
+
+/*---------------------------------------  upload prescription end--------------------------------  */
+
+/* -----------------------------------------Product list-------------------------------- */
+.product {
+     margin-top: 30px;
+     /* border: 2px solid yellow; */
+     padding: 0 59px;
+     display: flex;
+     justify-content: space-between;
+}
+
+.product-list {
+   /* border: .01px solid rgba(83, 79, 79, 0.232); */
+
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.product-list:hover{
+   /* border: .2px solid rgba(83, 79, 79, 0.91); */
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-list img {
+    width: 130px;
+    /* border: 2px solid green; */
+    margin-top: -20px;
+}
+
+.product-list h5 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.product-list p {
+    text-align: center;
+}
+
+@media (max-width: 760px) { 
+    .product{
+       flex-wrap: nowrap;
+       overflow: scroll;
+        padding: 0px;
+    }
+
+    .product::-webkit-scrollbar{
+     display: none;
+    }
+
+    .product-list{
+     margin-left: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================footer Start=================== */
+.footer-gray {
+  background-color:  #EEF4FF;
+  /* width: 100%; */
+  /* border: 2px solid red; */
+
+}
+
+.footer-custom {
+  color: #888;
+  font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /* max-width: 1008px; */
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: #000;
+  font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  color: #178a86;
+  cursor: pointer;
+  font-size:14px ;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 BebasFamily, BebasNeueRegular, "Bebas Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #178a86;
+  border-radius: 0 10px 10px 0;
+
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+ 
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+.footer-social li a img{
+  border-radius:5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+.footer-payment li a img{
+     width: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+/* ================================footer End=================== */
+
+/* -----------------------------------------whatsapp link----------------------------------------- */
+.hh{
+  position: fixed;
+  bottom: 10px;
+  right: 25px;
+}
+.hh img{
+   width: 50px;
+   border-radius: 50%;
+}

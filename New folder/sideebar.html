@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #f8f9fa;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 43645;
+    }
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="container">
+        <h5><a href="#" id="sidebarToggle">Toggle Sidebar</a></h5>
+    </div>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <button class="close-btn btn btn-link"><i class="bi bi-x"></i></button>
+    <ul class="list-group mt-5">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const closeBtn = document.querySelector('.close-btn');
+
+    sidebarToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('show');
+    });
+
+    closeBtn.addEventListener('click', function() {
+        sidebar.classList.remove('show');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebar.classList.remove('show');
+        }
+    });
+
+    // Check if Bootstrap Icons are loaded
+    if (typeof window !== 'undefined' && window.Icon) {
+        // Icons are loaded
+        console.log('Bootstrap Icons loaded.');
+    } else {
+        // Icons are not loaded
+        console.error('Bootstrap Icons not loaded.');
+    }
+</script>
+</body>
+</html>

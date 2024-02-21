@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom CSS */
+      
+
+        .uplo-pres {
+            /* padding: 15px; */
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* border: 2px solid red; */
+        }
+
+    
+        .prescri-img {
+            text-align: center;
+        }
+
+        .prescri-img img {
+            width: 100px;
+        }
+        
+        .uplo-pres .pp{
+            /* border: 2px solid red; */
+            margin-left: 60px;
+        }
+        .uplo-pres .pp h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #dc3545;
+        }
+
+        .uplo-pres .pp p {
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .uplo-pres .pp button {
+            background-color: #10847e;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .uplo-pres .pp button i{
+            color: white;
+        }
+       .uplo-pres .pp button:hover {
+            background-color: #c82333;
+        }
+
+        .yy:last-child {
+            border-left: 1px solid #e9ecef;
+        }
+
+        .uplo-pres-process {
+            margin-top: 10px;
+        }
+        
+        .uplo-pres .yy{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-right: 29px;
+          /* border-right: 1px solid rgb(82, 58, 58); */
+        }
+        .uplo-pres .zz i{
+            font-size: 25px;
+            color: #10847e;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+    .zz {
+        border-top: 2px solid rgba(77, 68, 68, 0.082);
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="container  uplo-pres">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 d-flex py-2 yy">
+                    <div class="prescri-img">
+                        <img src="Rx.png" alt="Prescription Image">
+                    </div>
+                    <div class="pp">
+                        <h3>Order with Prescription</h3>
+                        <p>Upload prescription and we will deliver your medicines</p>
+                        <a href="your_upload_url_here" class="btn btn-primary"><i class="bi bi-paperclip"></i> Upload</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 ps-4 py-2 zz">
+                    <p>How does this work</p>
+                    <div class="row">
+                        <div class="col-6 uplo-pres-process"><i class="bi bi-1-circle-fill"></i>Upload a photo of your prescription</div>
+                        <div class="col-6 uplo-pres-process"> <i class="bi bi-2-circle-fill"></i>Add delivery address and place the order</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 uplo-pres-process"> <i class="bi bi-3-circle-fill"></i>We will call you to confirm the medicines</div>
+                        <div class="col-6 uplo-pres-process"><i class="bi bi-4-circle-fill"></i>Now, sit back! your medicines will get delivered at your doorstep</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
