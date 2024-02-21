@@ -199,10 +199,12 @@ a{
 .product-list h5 {
     margin-top: 5px;
     text-align: center;
+    font-size: 16px;
 }
 
 .product-list p {
     text-align: center;
+    color:red;
 }
 
 @media (max-width: 760px) { 
@@ -223,9 +225,131 @@ a{
 
 
 
+/* Lab-Tests-by-Health-Concern Start */
+.Lab-Tests-by-Health-Concern{
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  padding: 0 0 10px 0;
+  /* border: 2px solid red; */
+}
+.Lab-Tests-by-Health-Concern::-webkit-scrollbar{
+  display: none;
+}
+.Lab-Tests-by-Health-Concern-img a{
+  cursor: pointer;
+}
+
+.Lab-Tests-by-Health-Concern-img img{
+  width: 180px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.Lab-Tests-by-Health-Concern-img img:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* Lab-Tests-by-Health-Concern End */
 
 
 
+
+
+
+
+
+/* <!-- -----------------------------------Upload Prescription Process Start ------------------> */
+.uplo-pres {
+  margin-top: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+
+.prescri-img {
+  text-align: center;
+}
+
+.prescri-img img {
+  width: 100px;
+}
+
+.uplo-pres .pp{
+  /* border: 2px solid red; */
+  margin-left: 60px;
+}
+.uplo-pres .pp h3 {
+  margin-top: 0;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  
+}
+
+.uplo-pres .pp p {
+  margin-top: 5px;
+  color: #333;
+}
+
+.uplo-pres .pp button {
+  background-color: #10847e;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.uplo-pres .pp button i{
+  color: white;
+}
+.uplo-pres .pp button:hover {
+  background-color: #c82333;
+}
+
+.yy:last-child {
+  border-left: 1px solid #e9ecef;
+}
+
+.njk{
+  /* border: 2px solid red; */
+  margin-top: -25px;
+}
+.uplo-pres-process {
+  margin-top: 10px;
+}
+
+.uplo-pres .yy{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-right: 29px;
+border-radius: 8px 0 0 8px;
+background-color: #EEF4FF;
+/* border-right: 1px solid rgb(82, 58, 58); */
+}
+.uplo-pres .zz i{
+  font-size: 25px;
+  color: #10847e;
+  margin-right: 10px;
+}
+
+.zz p{
+  font-family: Inter, sans-serif;
+font-size: 14px;
+font-weight: 600;
+line-height: 24px;
+}
+@media (max-width: 768px) {
+.zz {
+border-top: 2px solid rgba(77, 68, 68, 0.082);
+}
+}
+/* <!-- -----------------------------------Upload Prescription Process Start ------------------> */
 
 
 

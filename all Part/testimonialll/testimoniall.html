@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-xxxxxx" crossorigin="anonymous">
+
+    <style>
+        /* prefix mixin */
+@function prefix($property, $value) {
+  @return (
+    -webkit-#{$property}: $value,
+    -moz-#{$property}: $value,
+    -ms-#{$property}: $value,
+    -o-#{$property}: $value,
+    #{$property}: $value
+  );
+}
+
+/* global classes */
+%cover {
+  background-size: cover;
+}
+
+%circle {
+  border-radius: 50%;
+}
+
+.overlay-7 {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* testimonials slider */
+#testimonials .overlay-7 {
+  padding: 20px;
+}
+
+#testimonials .client-say {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.client-say .avatar {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.client-say .avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.client-say p {
+  color: #eaeaea;
+  padding: 20px;
+}
+
+.client img {
+  border-radius: 50%;
+}
+
+.client p {
+  font-style: italic;
+}
+
+.client > span {
+  text-transform: capitalize;
+}
+
+/* slider */
+.sliderShowMAF {
+  position: relative;
+  display: block;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliderBox {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.activeSlide {
+  display: block !important;
+}
+
+.rightArrow,
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow:hover,
+.leftArrow:hover {
+  color: #eee;
+}
+
+/* animations */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dropIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes dropOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <section id="testimonials">
+        <div class="overlay-7">
+          <div class="container client-say sliderShowMAF">
+            <div class="client sliderBox activeSlide">
+              <div class="avatar">
+                <img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" alt="client" />
+              </div>
+              <p><q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud</q></p>
+              <span>john deo</span>
+            </div>
+            <div class="client sliderBox">
+              <div class="avatar">
+                <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-teacher-312a499a08079a12-512x512.png" alt="client" />
+              </div>
+              <p><q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud</q></p>
+              <span>marya doe</span>
+            </div>
+            <div class="client sliderBox">
+              <div class="avatar">
+                <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-coder-3579ca3abc3fd60f-512x512.png" alt="client" />
+              </div>
+              <p><q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud</q></p>
+              <span>lary page</span>
+            </div>
+            <div class="client sliderBox">
+              <div class="avatar">
+                <img src="https://imgur.com/I80W1Q0.png" alt="client" />
+              </div>
+              <p><q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud</q></p>
+              <span>mohssine aboutaj</span>
+            </div>
+            <div class="client sliderBox">
+              <div class="avatar">
+                <img src="https://i.imgur.com/0gGg9I4.png" alt="client" />
+              </div>
+              <p><q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud</q></p>
+              <span>mark zukenburg</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+<script>
+    // Slider pure JS
+    // Make variables and create the Arrows element
+    var mainSliderBox = document.querySelector('.sliderShowMAF'),
+        sliderBoxs = mainSliderBox.querySelectorAll('.sliderBox'),
+        rightArrow = document.createElement('span'),
+        leftArrow = document.createElement('span'),
+        i = 0;
+    
+    // Set content and classes in the Arrows
+    rightArrow.innerHTML = '<i class="fa fa-chevron-circle-right"></i>';
+    rightArrow.classList = 'rightArrow';
+    leftArrow.innerHTML = '<i class="fa fa-chevron-circle-left"></i>';
+    leftArrow.classList = 'leftArrow';
+    
+    // Append the Arrows created into the main slider box
+    mainSliderBox.appendChild(rightArrow);
+    mainSliderBox.appendChild(leftArrow);
+    
+    // Hide the left arrows
+    leftArrow.style.display = 'none';
+    
+    // If the right arrow onclick
+    rightArrow.onclick = function(){
+      mainSliderBox.style.direction = 'ltr';
+      sliderBoxs[i].classList.remove('activeSlide');
+      sliderBoxs[i].style.animation = 'fadeOut 1s 1';
+      sliderBoxs[i+1].classList.add('activeSlide');
+      sliderBoxs[i+1].style.animation = 'fadeIn 1s 1';
+      i++;
+      
+      if(i == sliderBoxs.length - 1){
+        rightArrow.style.display = 'none';
+      } else {
+        leftArrow.style.display = 'block';
+      }
+    };
+    
+    // If the left arrow onclick
+    leftArrow.onclick = function(){
+      mainSliderBox.style.direction = 'rtl';
+      sliderBoxs[i].classList.remove('activeSlide');
+      sliderBoxs[i].style.animation = 'fadeOut 1s 1';
+      sliderBoxs[i-1].classList.add('activeSlide');
+      sliderBoxs[i-1].style.animation = 'fadeIn 1s 1';
+      i--;
+      
+      if(i == 0){
+        leftArrow.style.display = 'none';
+      } else {
+        rightArrow.style.display = 'block';
+      }
+    };
+</script>
+<script src="https://kit.fontawesome.com/b3263a74b4.js" crossorigin="anonymous"></script>
+</html>

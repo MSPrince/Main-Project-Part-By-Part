@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop File Upload</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .zone {      
+    /* margin: auto; */
+    background: radial-gradient(ellipse at center,#EB6A5A 0,#c9402f 100%);
+    width:40%;
+    height:50%;  
+    border:5px solid rgb(9, 241, 29);
+    text-align:center;
+    color: white;
+    z-index: 20;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.05),inset 0 0 .25em 0 rgba(0,0,0,.25);
+  }
+
+  .zone .btnCompression .btn.active {
+    background: #EB6A5A;
+    color:white;
+  }
+
+  .zone i {
+    text-align: center;
+    font-size: 10em;  
+    color:#fff;
+    margin-top: 50px;
+  }
+
+  .zone .selectFile {
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;          
+  }
+
+  .zone label, .zone input {
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 5px;          
+  }
+
+  .zone label {
+    background: #fff;
+    color:#EB6A5A;
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 50px;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 400;   
+    box-shadow: 0 1px 1px gray;
+  }
+
+  .zone input[type=file] {
+    opacity: 0;
+  }
+
+  .zone.in {
+    color:white;
+    border-color:white;
+    background: radial-gradient(ellipse at center,#EB6A5A 0,#c9402f 100%);
+  }
+
+  .zone.in i {          
+    color:#fff;
+  }
+
+  .zone.in label {
+    background: #fff;
+    color:#EB6A5A;
+  }
+
+  .zone.hover {
+    color:gray;
+    border-color:white;
+    background:#fff;
+    border:5px dashed gray;
+  }
+
+  .zone.hover i {          
+    color:#EB6A5A;
+  }
+
+  .zone.hover label {
+    background: #fff;
+    color:#EB6A5A;
+  }
+
+  .zone.fade {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+    
+<div class="zone">
+  <div id="dropZ">
+    <i class="fa fa-cloud-upload"></i>
+    <div>Drag and drop your file here</div>                    
+    <span>OR</span>
+    <div class="selectFile">       
+      <label for="file">Select file</label>                   
+      <input type="file" name="files[]" id="file">
+    </div>
+    <p>File size limit : 10 MB</p>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).bind('dragover', function (e) {
+    var dropZone = $('.zone'),
+        timeout = window.dropZoneTimeout;
+    if (!timeout) {
+        dropZone.addClass('in');
+    } else {
+        clearTimeout(timeout);
+    }
+    var found = false,
+        node = e.target;
+    do {
+        if (node === dropZone[0]) {
+            found = true;
+            break;
+        }
+        node = node.parentNode;
+    } while (node != null);
+    if (found) {
+        dropZone.addClass('hover');
+    } else {
+        dropZone.removeClass('hover');
+    }
+    window.dropZoneTimeout = setTimeout(function () {
+        window.dropZoneTimeout = null;
+        dropZone.removeClass('in hover');
+    }, 100);
+});
+</script>
+</body>
+</html>
