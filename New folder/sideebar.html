@@ -10,8 +10,8 @@
     .sidebar {
         position: fixed;
         top: 0;
-        left: -250px;
-        width: 250px;
+        left: -450px;
+        width: 450px;
         height: 100vh;
         background-color: #f8f9fa;
         transition: all 0.3s ease;
@@ -32,6 +32,10 @@
         cursor: pointer;
         z-index: 43645;
     }
+    .list-group-item img{
+        width: 100%;
+        height: 90%;
+    }
 </style>
 </head>
 <body>
@@ -45,9 +49,8 @@
 <div class="sidebar" id="sidebar">
     <button class="close-btn btn btn-link"><i class="bi bi-x"></i></button>
     <ul class="list-group mt-5">
-        <li class="list-group-item">Item 1</li>
-        <li class="list-group-item">Item 2</li>
-        <li class="list-group-item">Item 3</li>
+        <li class="list-group-item"><img src="../A Doctor's Diary/asset/upload-prescription-complete Page/date-of-prescription.png" alt=""></li>
+
     </ul>
 </div>
 
@@ -71,14 +74,7 @@
         }
     });
 
-    // Check if Bootstrap Icons are loaded
-    if (typeof window !== 'undefined' && window.Icon) {
-        // Icons are loaded
-        console.log('Bootstrap Icons loaded.');
-    } else {
-        // Icons are not loaded
-        console.error('Bootstrap Icons not loaded.');
-    }
+
 </script>
 </body>
 </html>

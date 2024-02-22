@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shopping-cart.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+      <div class="superNav border-bottom py-2 bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+              <select class="me-3 border-0 bg-light">
+                <option value="en-us">EN-US</option>
+                <option value="en-us">HI-IN</option>
+              </select>
+              <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
+                <i class="fa-solid fa-envelope me-1 text-warning"></i>
+                <strong>
+                  <a href="mailto:maurya.prince06@gmail.com" class="mail"> maurya.prince06@gmail.com</a>
+      
+                </strong></span>
+              <span class="me-3"><i class="fa-solid fa-phone me-1 text-warning"></i>
+                <strong><a href="tel:+91-789-717-3138" class="mobNo"> +91-789-717-3138 </a> </strong></span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+              <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted shipping"
+                  href="#">Shipping</a></span>
+              <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted shipping"
+                  href="#">Policy</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-1 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../asset/logo.jpg" alt="" class="logo img-fluid"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">Order Medicine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="shopping-cart.html">Lab Test</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">Online Consult</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">Health Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">Plus Benifit</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i>
+                  Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i>
+                  Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar End -->
+      
+      <!-- pagibnation -->
+      <div class="container-fluid mt-3">
+        <div class="container pagination">
+          <a href="index.html">Home > &nbsp</a><a href="shopping-cart.html"> Lab Test</a>
+        </div>
+      </div>
+
+  <div class="All-Test">
+    <div class="container-fluid">
+      <div class="container">
+        <h2>Lab Test</h2>
+      </div>
+    </div>
+
+    <div class="container-fluid body-lab">
+      <div class="container container-lab">
+        <div class="shopping-container" id="shopping-container">
+        </div>
+        
+        <div class="cart-container">
+          <h3>Order Summary</h3>
+          <div> 
+          <div id="cart" class="border-bottom pb-3 mb-3 textt"></div>
+          <div id="product-price"></div>
+          <div id="product-quantity"></div>
+          </div>
+          <p>Total: <span id="total">0</span></p>
+          <button class="btn btn-primary w-100 mb-3 check-out-button">Check Out</button>
+          <p id="free-delivery">Free Delivery on all orders</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ====================================================================================== -->
+  
+
+<!-- -------------------------------------------Footer Start---------------------------============== -->
+<footer>
+  <div class="footer-gray pt-2">
+       <div class="footer-custom">
+            <div class="footer-lists">
+                 <div class="footer-list-wrap">
+                      <h6 class="ftr-hdr">Order Toll Free</h6>
+                      <ul class="ftr-links-sub">
+                           <li><a href="tel:+919598149103">9588149103</a></li>
+                      </ul>
+                      <h6 class="ftr-hdr">Our Services </h6>
+                      <ul class="ftr-links-sub">
+                           <li><a href="" rel="nofollow">Order Medicine</a></li>
+                           <li><a href="http" rel="nofollow"> Healthcare Products</a></li>
+                           <li><a href="http" rel="nofollow"> Lab Tests</a></li>
+                           <li><a href="http" rel="nofollow"> Find Nearest Centre</a></li>
+                      </ul>
+                 </div>
+                 <!--/.footer-list-wrap-->
+                 <div class="footer-list-wrap">
+                      <h6 class="ftr-hdr">Featured Categories </h6>
+                      <ul class="ftr-links-sub">
+                           <li><a href="/help/t" rel="nofollow"> Top Products</a></li>
+                           <li><a href="/help/placin" rel="nofollow"> Elderly Care</a></li>
+                           <li><a href="/help/s" rel="nofollow"> Personal Care</a></li>
+                           <li><a href="/help/shipping" rel="nofollow"> Healthcare Devices</a></li>
+                           <li><a href="/help/international-s" rel="nofollow"> Health Food and Drinks</a></li>
+                           <li><a href="/~/" rel="nofollow"> Skin Care</a></li>
+                           <li><a href="/h" rel="nofollow"> Mother and Baby Care</a></li>
+                           <li><a href="/l" rel="nofollow"> Sexual Wellness</a></li>
+                           <li><a href="/l" rel="nofollow"> Ayurvedic Care</a></li>
+                      </ul>
+                 </div>
+                 <div class="footer-list-wrap">
+                      <h6 class="ftr-hdr">Need Help</h6>
+                      <ul class="ftr-links-sub">
+                           <li><a href="/asp/aboutus/dault-asp/_/posters.htm" rel="nofollow"> Browse All
+                                     Medicines</a></li>
+                           <li><a href="http://corporate.MS17.com/careers" rel="nofollow">Browse All
+                                     Molecules</a>
+                           </li>
+                           <li><a href="/asp/landing/aistrising" rel="nofollow"> Browse All Cities</a></li>
+                           <li><a href="/~/art-for-biness" rel="nofollow"> Browse All Areas</a></li>
+                           <li><a href="http://affiliates.MS17.com/index.aspx" rel="nofollow"> Browse All
+                                     Stores</a>
+                           </li>
+                           <li><a href="http://affiates.MS17.com/index.aspx" rel="nofollow"> FAQs</a></li>
+                           <li><a href="/catog" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+                           <li><a href="http://g.MS17.com" rel="nofollow">doctors.com BLOG</a></li>
+                      </ul>
+                 </div>
+                 <!--/.footer-list-wrap-->
+                 <div class="footer-list-wrap">
+                      <h6 class="ftr-hdr">Policy Info</h6>
+                      <ul class="ftr-links-sub">
+                           <li><a href="/asp/aboutus/deft-asp/_/posters.htm" rel="nofollow"> Editorial
+                                     Policy</a>
+                           </li>
+                           <li><a href="http://corporate.MS17.com/careers" rel="nofollow">Privacy Policy</a>
+                           </li>
+                           <li><a href="/asp/landinrtistrising" rel="nofollow"> Vulnerability Policy</a></li>
+                           <li><a href="/~/art-foriness" rel="nofollow"> Terms and Conditions</a></li>
+                           <li><a href="http://affites.MS17.com/index.aspx" rel="nofollow"> Customer Support
+                                     Policy</a></li>
+                           <li><a href="http://afates.MS17.com/index.aspx" rel="nofollow"> Return Policy</a>
+                           </li>
+                      </ul>
+                 </div>
+                 <!--/.footer-list-wrap-->
+            </div>
+            <!--/.footer-lists-->
+            <div class="footer-email">
+                 <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+                 <div id="ftr-email" class="ftr-email-form mt-3">
+                      <form id="ftrEmailForm" method="post" action="http://em.MS17.com/pub/rf">
+                           <div class="error">Please enter a valid email address</div>
+                           <input type="text" name="email_address_" id="ftrEmailInput" class="input"
+                                placeholder="Enter email address" />
+                           <!--
+              -->
+                           <input type="submit" class="button" value="SUBMIT" />
+
+                      </form>
+                 </div>
+                 <!--/.ftr-email-form-->
+                 <div class="ftr-email-privacy-policy"></div>
+            </div>
+            <!--/.footer-email-->
+            <div class="footer-social">
+                 <h6 class="ftr-hdr">Follow Us</h6>
+                 <ul class="mt-3">
+                      <li>
+                           <a href="https://www.faccom/MS17.com" title="Facebook">
+                                <img width="24" height="24" alt="Like us on Facebook"
+                                     src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                           </a>
+                      </li>
+                      <li>
+                           <a href="https://plus.google.08089796661280870153" title="Google+">
+                                <img width="24" height="24" alt="Follow us on Google+"
+                                     src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                           </a>
+                      </li>
+                      <li>
+                           <a href="https://pinterest.ctdotcom/" target="_blank">
+                                <img width="24" height="24" alt="Follow us on Pinterest"
+                                     src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                           </a>
+                      </li>
+                      <li>
+                           <a target="_blank" href="http://igram.com/artdotcom/">
+                                <img width="24" height="24" alt="Follow us on Instagram"
+                                     src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                           </a>
+                      </li>
+                      <li>
+                           <a href="https://www.twcom/artdotcom" title="Twitter">
+                                <img width="67" alt="Follow us on Twitter"
+                                     src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                           </a>
+                      </li>
+                 </ul>
+            </div>
+            <!--/.footer-social-->
+            <div class="footer-legal">
+                 <p>&copy; MS17.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html"
+                           rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html"
+                           rel="nofollow">Terms
+                           of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+                 <p>MS17.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of MS17.com
+                      Inc.
+                 </p>
+                 <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other
+                      pending
+                      patent applications.</p>
+            </div>
+            <!--/.footer-legal-->
+            <div class="footer-payment">
+                 <ul>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/gpay.png" alt=""></a>
+                      </li>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/phonepe.png" alt=""></a>
+                      </li>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/rupay.png" alt=""></a>
+                      </li>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/visa.png" alt=""></a>
+                      </li>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/mobikwik.png" alt=""></a>
+                      </li>
+                      <li>
+                           <a href=""><img src="../asset/payment-img/paytm.png" alt=""></a>
+                      </li>
+                 </ul>
+            </div>
+            <!--/.footer-payment-->
+       </div>
+       <!--/.footer-custom-->
+  </div>
+</footer>
+<!-- -------------------------------------------Footer End---------------------------============== -->
+
+<!-- whatsapp link -->
+  <div class="hh">
+       <a href="https://wa.link/94e62n"><img src="../asset/whatsapp/whatsapp.png" alt=""></a>
+  </div>
+
+  <script>
+    // Sample data array
+    const testData = [
+      {
+        name: "Complete Blood Count / Hemogram (CBC) Test",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Post Prandial Blood sugar (PPBS) Test",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Cardiac Risk Markers (CRM) Test",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Creatinine Test",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Lipid Profile test",
+        tests: 10,
+        rate: 399
+      },
+      {
+        name: "Total IgE",
+        tests: 1,
+        rate: 509
+      },
+      {
+        name: "Liver Function Test",
+        tests: 12,
+        rate: 200
+      },
+      {
+        name: "Albumin Creatinine Ratio (ACR) / Urine For Microalbuminuria Test",
+        tests: 1,
+        rate: 200
+      },
+      {
+        name: "Typhi Test - IgM",
+        tests: 1,
+        rate: 200
+      },
+      {
+        name: "Widal Test (slide Method)",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Renal / Kidney Function Test (RFT / KFT)",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: "Free Thyroid Profile Test",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      {
+        name: " ",
+        tests: 24,
+        rate: 200
+      },
+      // Add more items here
+    ];
+
+    const shoppingContainer = document.getElementById("shopping-container");
+
+    // Loop through the testData array and create elements for each item
+    testData.forEach(item => {
+      const va = document.createElement("div");
+      va.className = "va";
+
+      const detailTest = document.createElement("div");
+      detailTest.className = "detail-test";
+
+      const h3 = document.createElement("h3");
+      h3.textContent = item.name;
+
+      const tt = document.createElement("div");
+      tt.className = "tt";
+
+      const p1 = document.createElement("p");
+      p1.textContent = `${item.tests} test include`;
+
+      const p2 = document.createElement("p");
+      const showMore = document.createElement("a");
+      showMore.href = "";
+      showMore.textContent = "show more";
+      p2.appendChild(showMore);
+
+      const rate = document.createElement("p");
+      rate.className = "rate";
+      rate.textContent = `Rs ${item.rate}`;
+
+      detailTest.appendChild(h3);
+      tt.appendChild(p1);
+      tt.appendChild(p2);
+      detailTest.appendChild(tt);
+      detailTest.appendChild(rate);
+      va.appendChild(detailTest);
+
+      const button = document.createElement("button");
+      button.textContent = "Book Now";
+      button.onclick = function () {
+        addToCart(item.name, item.rate);
+      };
+
+      va.appendChild(button);
+      shoppingContainer.appendChild(va);
+    });
+
+    // function addToCart(name, rate) {
+    //   // Implement your add to cart logic here
+    //   console.log(`Adding ${name} to cart`);
+    // }
+  </script>
+
+
+  <script>
+    let cart = [];
+
+    function addToCart(product, price) {
+      let existingItem = cart.find(item => item.product === product);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ product, price, quantity: 1 });
+      }
+      updateCart();
+    }
+
+    function updateCart() {
+      let cartElement = document.getElementById('cart');
+      let totalElement = document.getElementById('total');
+      cartElement.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        let itemElement = document.createElement('div');
+        itemElement.textContent = `${item.product} - Rs ${item.price}  for  ${item.quantity} Patient`;
+        cartElement.appendChild(itemElement);
+        total += item.price * item.quantity;
+      });
+      totalElement.textContent = total;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <!-- font Awsome -->
+  <script src="https://kit.fontawesome.com/b3263a74b4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

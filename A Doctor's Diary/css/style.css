@@ -223,6 +223,145 @@ a{
     }
 }
 
+/* ==================================================================================================== */
+
+
+
+/* <!--========================================== offer-slider-Start======================================== --> */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.vcd{
+  background: linear-gradient(#FFFFFF, #FFF0D2 , #E0F5FC , #FFFCF4);
+}
+.offer-package {
+  display: flex;
+  padding: 0 35px;
+  /* min-height: 100vh; */
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+
+  border: 0px solid white;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+  border: 0px solid white;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background:  #10847E;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 766896;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  /* padding: 0 20px 0 20px; */
+  /* border: 2px solid red; */
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+  /* border: 2px solid red; */
+}
+
+.carousel img {
+  height: 230px;
+  border-radius: 10px;
+  object-fit: fit;
+  user-select: none;
+  margin-left: 34px;
+  width: calc(100% / 2);
+  /* border: 2px solid red; */
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+.wrapper .carousel a {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
+/* <!--========================================== offer slider End======================================== --> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Lab-Tests-by-Health-Concern Start */
@@ -390,7 +529,74 @@ border-top: 2px solid rgba(77, 68, 68, 0.082);
 
 
 
+/* ==============================  Seo  Section Start ======================================== */
 
+a {
+  text-decoration: none;
+}
+
+.seo {
+  text-align: justify;
+}
+
+.seo .seoheading {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.918)
+}
+
+.seo a {
+  color: gray;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none solid rgb(48, 54, 60);
+  word-spacing: 0px;
+}
+
+.seo a:hover {
+  color: #10847e;
+  font-weight: 400;
+}
+
+.seo span {
+  color: gray;
+  margin: 0 3px;
+}
+
+.home-seo {
+  text-align: justify;
+}
+.home-seo-detail {
+background-color: #f8f9fa; /* Example: change background color for home-seo-detail */
+padding: 20px;
+}
+.home-seo-detail h5 {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.home-seo-detail h6 {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 15px;
+}
+
+.home-seo-detail p {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none solid rgb(48, 54, 60);
+  word-spacing: 0px;
+}
+
+/* ===========================Seo Section End============================================= */
 
 
 
