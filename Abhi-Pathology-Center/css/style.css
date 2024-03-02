@@ -9,7 +9,9 @@
 a{
      text-decoration: none;
 }
-
+body{
+  position: relative;
+}
 /* ======================================navbar Start ====================================*/
 .topbar{
     color: #178a86;
@@ -58,7 +60,7 @@ a{
 our-services {
   display: grid;
   place-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 .our-services-row {
   display: flex;
@@ -151,7 +153,6 @@ line-height: 33.75px;
   font-weight: 800;
   text-align: center;
   /* margin-top: 50px; */
-  position: relative;
   animation: fadeInOut 3s ease-in-out infinite;
   margin: auto;
 }
@@ -187,7 +188,6 @@ line-height: 33.75px;
 /* ================================footer Start=================== */
 /* Importing Google font - Open Sans */
 .footer {
-  position: relative;
   width: 100%;
   background: #178a86;
 }
@@ -288,4 +288,15 @@ line-height: 33.75px;
   .footer-col form button {
     margin: 10px 0 0 0;
   }
+}
+
+
+.what{
+  position: absolute;
+  top: 10px;
+  border: 20px solid red;
+}
+
+.what a img{
+  width: 70px;
 }

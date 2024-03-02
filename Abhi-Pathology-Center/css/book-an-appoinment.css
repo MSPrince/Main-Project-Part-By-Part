@@ -1,0 +1,41 @@
+
+body{
+   background: url("https://img.freepik.com/free-vector/medical-healthcare-blue-color_1017-26807.jpg?t=st=1709401390~exp=1709404990~hmac=44d35bfd6a1c5c13ac4c49653089208ff9c1c337c6071114a4d6691042d78d2a&w=1060");
+    background-size: 100vw;
+}
+.custom-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.18);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.custom-label {
+    font-weight: bold;
+}
+
+.custom-btn-primary {
+    background-color: #178a868d;
+    border-color: #178a8687;
+    width: 100%;
+}
+
+.custom-btn-primary:hover {
+    
+    background-color: #178a86;
+    border-color: #178a86;
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        padding: 10px;
+    }
+}
