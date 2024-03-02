@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            background: url("https://img.freepik.com/free-photo/white-simple-textured-design-background_53876-106174.jpg?w=996&t=st=1709385443~exp=1709386043~hmac=e731532a9e6b5405b3ebf891c0ea1d815954995439617728867b10aa212731ec");
+            background-size: 100vw 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: calc(100vh - 80px);
+        }
+
+        .login-img {
+            text-align: center;
+        }
+
+        .login-img img {
+            max-width: 100%;
+        }
+
+        .login-form {
+            width: 350px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: #10847e;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #166fe5;
+        }
+
+        .text-decoration-none {
+            text-decoration: none;
+            color: #1877f2;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .login-img {
+                display: none;
+            }
+
+            .login-container {
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            .login-form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--------------------------------------------- navbar Start------------------------------------------------------------ -->
+<div class="superNav border-bottom py-2 bg-light">
+    <div class="container-fluid">
+         <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+                   <select class="me-3 border-0 bg-light">
+                        <option value="en-us">EN-US</option>
+                        <option value="en-us">HI-IN</option>
+                   </select>
+                   <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
+                        <i class="fa-solid fa-envelope me-1 topbar"></i>
+                        <strong>
+                             <a href="mailto:maurya.prince06@gmail.com" class="mail">
+                                  maurya.prince06@gmail.com</a>
+
+                        </strong></span>
+                   <span class="me-3"><i class="fa-solid fa-phone me-1 topbar"></i>
+                        <strong><a href="tel:+91-789-717-3138" class="mobNo"> +91-789-717-3138 </a>
+                        </strong></span>
+              </div>
+              <div
+                   class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+                   <span class="me-3"><i class="fa-solid fa-truck topbar me-1"></i><a class="text-muted shipping"
+                             href="#">Shipping</a></span>
+                   <span class="me-3"><i class="fa-solid fa-file topbar me-2"></i><a class="text-muted shipping"
+                             href="#">Policy</a></span>
+              </div>
+         </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-1 shadow-sm">
+    <div class="container-fluid">
+         <a class="navbar-brand" href="#"><img src="../asset/logo/logo.JPG" alt="" class="logo img-fluid"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto ">
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="./index.html">Home</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Dignostic Test</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="./html/book-lab-test.html">About Us</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Testimonial</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Contact Us</a>
+                   </li>
+              </ul>
+              <ul class="navbar-nav ms-auto ">
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">
+                             <i class="fa-solid fa-calendar-check me-1"></i>
+                             Book An Appoinment</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="./html/loginpage.html"><i
+                                  class="fa-solid fa-circle-user me-1"></i>
+                             Account</a>
+                   </li>
+              </ul>
+         </div>
+    </div>
+</nav>
+<!-------------------------------------------- navbar End--------------------------------------------------------------- -->
+
+
+
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-img">
+                    <img src="../asset/logo/1709384648502-removebg.png" width="500px">
+                    <p>Don't Stop medication because now you feel fine. Please follow doctor prescription</p>
+                </div>
+                <div class="login-form">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address:</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label sr-only">Password:</label>
+                            <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+                        </div>
+                        <div class="mb-3">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</a>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                        </div>
+                        <div class="mb-3">
+                            <p>Don't have an account? <a href="./signUppage.html" class="text-decoration-none">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forget Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter your email address below and we'll send you a link to reset your password.</p>
+                    <input type="email" id="forgotPasswordEmail" class="form-control" placeholder="Enter your email address" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="sendResetLinkBtn" disabled>Send Reset Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Modal for Reset Link Sent -->
+    <div class="modal fade" id="resetLinkSentModal" tabindex="-1" aria-labelledby="resetLinkSentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resetLinkSentModalLabel">Password Reset Link Sent</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A password reset link has been sent to your registered email address.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var forgotPasswordModal = new bootstrap.Modal(document.getElementById('forgotPasswordModal'));
+        var resetLinkSentModal = new bootstrap.Modal(document.getElementById('resetLinkSentModal'));
+
+        var emailInput = document.getElementById('forgotPasswordEmail');
+        var sendResetLinkBtn = document.getElementById('sendResetLinkBtn');
+
+        // Enable/disable button based on email input
+        emailInput.addEventListener('input', function() {
+            if (emailInput.value.trim() !== '') {
+                sendResetLinkBtn.removeAttribute('disabled');
+            } else {
+                sendResetLinkBtn.setAttribute('disabled', 'disabled');
+            }
+        });
+
+        document.getElementById('sendResetLinkBtn').addEventListener('click', function() {
+            // Simulate sending reset link (replace with actual logic)
+            setTimeout(function() {
+                forgotPasswordModal.hide();
+                resetLinkSentModal.show();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

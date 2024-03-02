@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* body{
+            background: linear-gradient(#FFFFFF, #FFF0D2 , #E0F5FC , #FFFCF4);
+        } */
+        /* Converted units to rem */
+        :root {
+            font-size: 16px;
+        }
+
+        .lab-test-1 {
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-right: auto;
+            margin-left: auto;
+            /* border: 2px solid red; */
+        }
+
+        /* Make the lab-test-first flex container responsive */
+        .lab-test-first {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: .2px solid rgba(255, 0, 0, 0.219); */
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Background color with transparency */
+            backdrop-filter: blur(10px);
+            /* Frosted glass effect */
+            border-radius: 10px;
+            /* Optional: rounded corners */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            border-radius: 12px;
+            /* Added to wrap items on smaller screens */
+        }
+
+        .lab-test-type {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+            margin: 10px;
+            height: 80px;
+            width: 210px;
+            border: 1px solid #4f585e33;
+            padding: 0 25px 0 25px;
+            min-height: auto;
+            min-width: auto;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .lab-test-type:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        /* Updated image size using rem */
+        .lab-img-1 img {
+            width: 2.3rem;
+            margin-right: 1.25rem;
+        }
+
+        /* Updated padding using rem */
+        .lab-detail-1 {
+            padding: 0.625rem 0;
+        }
+
+        .lab-detail-1 h4 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        /* Added media query for smaller screens */
+        @media (max-width: 576px) {
+            .lab-test-first {
+                flex-wrap: wrap;
+                /* Stack items vertically on smaller screens */
+                align-items: flex-start;
+                justify-content: center;
+                margin: auto;
+                /* Align items to the start */
+            }
+        }
+
+        .plus-member {
+            background: linear-gradient(#667eea, #764ba2);
+            padding: 10px 5px 2px 10px;
+            /* width: 90%; */
+            border-radius: 10px;
+        }
+
+        .plus-member a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* -----------------------------pincode search---------------------- */
+        .bodyy {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .avilabilityy {
+            border: 2px dotted red;
+            padding: 10px 15px 15px 10px;
+            background-color: #10847E;
+            border-radius: 10px;
+        }
+
+        .avilabilityy h4 {
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 32.5px;
+
+        }
+
+        .search-form {
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* border: 2px solid red; */
+
+
+        }
+
+        .search-text {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 5px 15px;
+
+            box-sizing: border-box;
+            font-size: 16px;
+
+            gap: 10px;
+            /* margin-right: 5px; */
+            margin-left: 5px;
+            /* border: 2px solid red; */
+        }
+
+        .pincode {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            /* border: 2px solid red; */
+            gap: 10px;
+            margin-right: 5px;
+
+
+        }
+
+        .search-form button {
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            /* padding: 10px; */
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: auto;
+            width: 100%;
+            margin-right: 5px;
+            margin-left: 10px;
+            padding: 5px;
+            width: 86%;
+        }
+
+        .search-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .serviceavilable {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .search-form button {
+                width: 98%;
+                margin-left: 15px;
+            }
+
+            .pincode {
+                margin-left: 15px;
+                width: 98%;
+            }
+
+            .search-text {
+                width: 98%;
+            }
+
+            .search-form {
+                width: 100%;
+                padding: 0 15px;
+                text-align: center;
+
+            }
+
+            .card-margin {
+                margin-bottom: 1rem;
+
+            }
+
+            .third,
+            .first {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 10px -10px;
+
+            }
+
+            .forth,
+            .fifth {
+                flex: 0 0 100%;
+                max-width: 100%;
+                /* border: 2px solid red; */
+            }
+
+            .second,
+            .first {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* ---------------------------------offer Package--------------------------------------- */
+        /* Import Google font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .offer-package {
+            display: flex;
+            padding: 15px 0px;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            /* border: 2px solid red; */
+        }
+
+        .wrapper {
+            display: flex;
+            max-width: 1200px;
+            position: relative;
+            border: 0px solid white;
+        }
+
+        .wrapper i {
+            top: 50%;
+            height: 44px;
+            width: 44px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.15rem;
+            position: absolute;
+            text-align: center;
+            line-height: 44px;
+            background: #10847E;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.1s linear;
+            z-index: 312323;
+        }
+
+        .wrapper i:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        .wrapper i:hover {
+            background: #f2f2f2;
+        }
+
+        .wrapper i:first-child {
+            left: -22px;
+            display: none;
+        }
+
+        .wrapper i:last-child {
+            right: -22px;
+        }
+
+        .wrapper .carousel {
+            font-size: 0px;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            /* border: 2px solid red; */
+        }
+
+        .carousel.dragging {
+            cursor: grab;
+            scroll-behavior: auto;
+        }
+
+        .carousel.dragging img {
+            pointer-events: none;
+
+            /* border: 2px solid red; */
+        }
+
+        .carousel img {
+            height: 280px;
+            object-fit: fit;
+            user-select: none;
+            margin-left: 34px;
+            width: calc(100% / 2);
+            border-radius: 10px;
+            /* border: 2px solid red; */
+        }
+
+        .carousel img:first-child {
+            margin-left: 0px;
+        }
+
+        .wrapper .carousel a {
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .carousel img {
+                width: calc(100% / 2);
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .carousel img {
+                width: 100%;
+            }
+        }
+
+
+        /* ---------------------------All offer code Section------------------------ */
+        a {
+            text-decoration: none;
+        }
+
+        .offer-container {
+            padding-left: 10px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+        }
+
+        .offer-container h4 {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .offer {
+            /* border: .5px solid gray; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            /* Enable horizontal scrollbar */
+            padding: 10px;
+            margin-top: -10px;
+        }
+
+        .offer::-webkit-scrollbar {
+            display: none;
+            /* Hide default scrollbar */
+        }
+
+        .offer-img {
+            margin-right: 10px;
+        }
+
+        .offer-img img {
+            width: 70px;
+            border-radius: 5px;
+        }
+
+        .offer-card {
+            width: 300px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 5px;
+            margin: 10px;
+            /* Added margin for spacing between cards */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            /* Added cursor pointer to indicate clickable */
+        }
+
+
+
+        .offer-detail p {
+            font-size: 12px;
+            line-height: 1.8;
+            color: gray;
+        }
+
+        /* --------------------------labtest SEO */
+
+.kl{
+    text-align: justify
+}
+
+
+
+
+
+/* -------------------------------faq Section  */
+/* < !-------------------------------------- faq section start --------------------------------------------------------------------------------> */
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600&display=swap');
+
+.faq-body {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid rgba(31, 27, 27, 0.295); */
+}
+
+::selection {
+    background: #7d2ae8;
+    color: #fff;
+}
+
+.accordion {
+    display: flex;
+    width: 1010px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 25px 70px 25px 60px;
+    /* border: 2px solid rgba(26, 24, 24, 0.26); */
+}
+
+.accordion .image-box {
+    height: 360px;
+    width: 300px;
+}
+
+.accordion .image-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.accordion .accordion-text {
+    width: 60%;
+}
+
+.accordion .accordion-text .title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #060606;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.accordion .accordion-text .faq-text {
+    margin-top: 25px;
+    height: 263px;
+    overflow-y: auto;
+}
+
+.faq-text::-webkit-scrollbar {
+    display: none;
+}
+
+.accordion .accordion-text li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.accordion-text li .question-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-text li .question-arrow .question {
+    font-size: 16px;
+    font-weight: 500;
+    color: #070707;
+    transition: all 0.3s ease;
+}
+
+.accordion-text li .question-arrow .arrow {
+    font-size: 20px;
+    color: #595959;
+    transition: all 0.3s ease;
+}
+
+.accordion-text li.showAnswer .question-arrow .arrow {
+    transform: rotate(-180deg);
+}
+
+.accordion-text li:hover .question-arrow .question,
+.accordion-text li:hover .question-arrow .arrow {
+    color: #7d2ae8;
+}
+
+.accordion-text li.showAnswer .question-arrow .question,
+.accordion-text li.showAnswer .question-arrow .arrow {
+    color: #7d2ae8;
+}
+
+.accordion-text li .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion-text li p {
+    width: 92%;
+    font-size: 13px;
+    font-weight: 500;
+    color: #595959;
+    display: none;
+}
+
+.accordion-text li.showAnswer p {
+    display: block;
+}
+
+@media (max-width: 994px) {
+    .accordion {
+        max-width: 100%;
+        padding: 45px 60px 45px 60px;
+    }
+
+    .accordion .image-box {
+        height: 360px;
+        width: 220px;
+    }
+
+    .accordion .accordion-text {
+        width: 63%;
+    }
+}
+
+@media (max-width: 820px) {
+    .accordion {
+        flex-direction: column;
+    }
+
+    .accordion .image-box {
+        height: 360px;
+        width: 300px;
+        background: #ddcfee86;
+        width: 100%;
+        border-radius: 25px;
+        padding: 30px;
+    }
+
+    .accordion .accordion-text {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 538px) {
+    .accordion {
+        padding: 25px;
+    }
+
+    .accordion-text li p {
+        width: 98%;
+    }
+}
+
+/* < !-- -------------------------------------faq section end --------------------------------------------------------------------------------> */
+</style>
+
+</head>
+
+<body>
+    <div class="superNav border-bottom py-2 bg-light">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+                    <select class="me-3 border-0 bg-light">
+                        <option value="en-us">EN-US</option>
+                        <option value="en-us">HI-IN</option>
+                    </select>
+                    <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
+                        <i class="fa-solid fa-envelope me-1 text-warning"></i>
+                        <strong>
+                            <a href="mailto:maurya.prince06@gmail.com" class="mail"> maurya.prince06@gmail.com</a>
+
+                        </strong></span>
+                    <span class="me-3"><i class="fa-solid fa-phone me-1 text-warning"></i>
+                        <strong><a href="tel:+91-789-717-3138" class="mobNo"> +91-789-717-3138 </a> </strong></span>
+                </div>
+                <div
+                    class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+                    <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted shipping"
+                            href="#">Shipping</a></span>
+                    <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted shipping"
+                            href="#">Policy</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-1 shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../asset/logo.jpg" alt="" class="logo img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Order Medicine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="./labtestpage.html">Lab Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Online Consult</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Health Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Plus Benifit</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i>
+                            Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="./loginpage.html"><i
+                                class="fa-solid fa-circle-user me-1"></i>
+                            Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar End -->
+
+    <!-- pagibnation -->
+    <div class="container-fluid mt-3">
+        <div class="container pagination">
+            <a href="index.html">Home > &nbsp</a><a href="labtestpage.html"> Lab Test</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Search Service Avilavilaty Start -->
+    <div class="bodyy">
+        <div class="container">
+            <div class="row avilabilityy">
+                <h4>Search for Medicines / Healthcare Products</h4>
+                <div class="second col-lg-12 card-margin">
+                    <div class="card search-form">
+                        <div class="card-body p-0">
+                            <form id="search-form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row no-gutters">
+                                            <div class="third col-lg-3 first col-md-3 pincode-box col-sm-12 p-0">
+                                                <input type="text" placeholder="&#xf0f9 Search Pincode..."
+                                                    class="form-control pincode" id="searchPincode" name="searchPincode"
+                                                    oninput="checkServiceAvailability(this.value)">
+                                                <div id="serviceAvailability" class="serviceavilable"></div>
+                                            </div>
+
+                                            <div class="forth col-lg-8 fifth col-md-6 col-sm-12 p-0">
+                                                <input type="text" placeholder="Search..."
+                                                    class="form-control search-text" id="search" name="search">
+                                            </div>
+                                            <div class="second col-lg-1 first col-md-3 col-sm-12 p-0">
+                                                <button type="submit" class="btn btn-base">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-search">
+                                                        <circle cx="11" cy="11" r="8"></circle>
+                                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Service Avilavilaty End -->
+
+
+
+
+    <!-- ----------------------------------------------------------------------------------------- -->
+    <div class="container-fluid lab-test-1 mt-3">
+        <div class="container lab-test-first">
+
+            <a href="">
+                <div class="lab-test-type">
+                    <div class="lab-img-1"><img src="../asset/lab-test-type/microscope.png" alt=""></div>
+                    <div class="lab-detail-1">
+                        <h4>Health Packages</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="./book-lab-test.html">
+                <div class="lab-test-type">
+                    <div class="lab-img-1"><img src="../asset/lab-test-type/in-love.png" alt=""></div>
+                    <div class="lab-detail-1">
+                        <h4>All Tests</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="./upload-prescription-complete Page.html">
+                <div class="lab-test-type">
+                    <div class="lab-img-1"><img src="../asset/lab-test-type/prescription.png" alt=""></div>
+                    <div class="lab-detail-1">
+                        <h4>Upload Prescription</h4>
+                    </div>
+                </div>
+            </a>
+          <a href="https://wa.link/94e62n">
+                <div class="lab-test-type">
+                    <div class="lab-img-1"><img src="../asset/lab-test-type/telephone.png" alt=""></div>
+                    <div class="lab-detail-1">
+                        <h4>Book On Call</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 mb-5">
+        <div class="container plus-member">
+            <a href="">
+                <p><img src="../asset/3864b471.svg" alt="" style="float: left; margin-right: 10px;">Save 5% on
+                    medicines, 50% on your first lab test, and enjoy FREE delivery with our PLUS membership benefits.
+                    Join today and start saving! Unlock exclusive savings with our PLUS membership: 5% off medicines,
+                    50% off your first lab test, and FREE delivery. Join now!
+                    <br> Know more >
+                </p>
+            </a>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+    <!-- all offer code Section Start -->
+    <div class="container-fluid">
+        <div class=" offer-container px-3">
+            <h4>All Offer</h4>
+
+            <div class="row offer">
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src=" ../asset/offer-code/4578d7e0ccf-CB150.png" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get FLAT Rs.150 cashback
+                            on PharmEasy Labtests...
+                            <br><strong>Code: 150CASH</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/5db436ee3cd-1_400x400.png" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get Flat Rs.50 Cashback on
+                            orders above Rs.300.
+                            <br> <strong>Code: CBCK50</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/60165886431-ten_per.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get extra 10% Off on
+                            Everherb, Liveasy or...
+                            <br> <strong>Code: ELPIO</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/702efbbe2e6-au.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Flat Rs.150 Off on AU Bank
+                            debit card
+                            <br> <strong>Code: AUFEBI 50</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/a.jpg.PNG" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get FLAT Rs.200 cashback
+                            on Lab Test bookings for 2 Person
+
+                            <br> <strong>Code: MULT1200</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/727244967b6-cred-2.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get Upto ?250 cashback
+                            using CRED pay UPI
+                            <br> <strong>Code: CREDFEB</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/8cdf65ac110-mobiwiklogo.png" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get up to e500 cashback via
+                            Mobikwik. Use code...
+                            <br> <strong>Code: MBKFEB500</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/9dd85afdcfd-LOGO.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get FLAT ?150 off on
+                            medicines
+                            <br> <strong>Code: IDFCFEB</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/a.jpg.PNG" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get FLAT Rs.150 cashback
+                            on PharmEasy Labtests...
+                            <br> <strong>Code: MULT1150</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/b22c81d86d7-27.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>FLAT OFF on first 3
+                            medicine orders
+                            <br> <strong>Code: 27PHTC</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/b37af9e8d3a-simpl.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get upto ?300 cashback via
+                            Simpl.
+                            <br> <strong>Code: SIMPLPHE</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/cb3aff78d94-itc.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p> Get Extra e250 OFF on ITC
+                            Store
+                            <br> <strong>Code: ITC250</strong>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://example.com" class="offer-card"> <!-- Added anchor tag with href -->
+                    <div class="offer-img"><img src="../asset/offer-code/e887a2ca429-easemytrip.jpg" alt=""></div>
+                    <div class="offer-detail">
+                        <p>Get vouchers up to INR
+                            3000 from EaseMyTrip
+                            <br> <strong>Code: EMTPE786</strong>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- all offer code Section End  -->
+
+
+    <!----------------------------- Offer package Section Start--------------------------------------------  -->
+    <div class="container-fluid">
+        <div class="offer-package">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                    <a href="#"><img src=" ../asset/offer-package/img-1.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-2.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-3.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-4.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-5.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-6.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-7.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-8.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-9.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-10.jpg" alt="img" draggable="false"></a>
+                    <a href="#"><img src="../asset/offer-package/img-11.jpg" alt="img" draggable="false"></a>
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    <!----------------------------- Offer package Section End  ---------------------------------------------->
+
+
+
+    <!-- --------------------------labtest Seo ------------------------------ -->
+    <div class="container-fluid px-5 kl">
+        <h5> The (Pharm)Easy Way To Book Lab Tests Online</h5>
+        <p>Book Diagnostics Lab Test Online. Get doorstep sample collection </p>
+        <br>
+
+        <h5>Lab Test Booking Made Simple </h5>
+        <p>One of the most popular services PharmEasy offers is diagnostic testing. People need to book pathological
+            tests for many reasons. But before booking, they wonder if the <strong>diagnostic centre </strong>
+            diagnostic centre can be trusted to produce accurate results and how long they might have to wait in a queue
+            to get tested. </p>
+        <p>To bypass these hassles, PharmEasy has set up an extensive network of reputed <strong> pathological
+                laboratories </strong> in India. One such lab is Thyrocare. With Thyrocare on board, we can give you
+            access to a wide network of diagnostic laboratories.We also offer a <strong> home collection of samples
+            </strong> home collection of samples as well. Bid adieu to anxious days of wondering where to book
+            diagnostic tests and embrace the PharmEasy way. </p>
+
+
+        <h5> Lab tests at your doorstep</h5>
+        <p>To ease your anxieties, PharmEasy offers the facility of doorstep collection. The technician will come to
+            your house to collect samples. And all safety precautions are maintained. A fresh collection kit and/or
+            needle will be used so that there is no contamination of samples of the spread of diseases. We use special
+            ice boxes that meet NABL guidelines to transport your samples. The reports will be sent to you online. That
+            means you won’t have to travel to the diagnostic lab to collect your reports. </p>
+
+        <h5> How can you book diagnostic tests online?</h5>
+        <p> Booking a test on PharmEasy is simple </p>
+        <ul>
+            <li> Visit <a href="https://pharmeasy.in/diagnostics">https://pharmeasy.in/diagnostics</a> or click on Lab
+                Tests on the PharmEasy website or app.</li>
+            <li>Alternatively, you can call our customer service team on <a href="tel:7897173138+">7897173138</a>  and they will make the booking for
+                you</li>
+        </ul>
+
+
+        <h5> Why choose PharmEasy to book lab tests?</h5>
+        <p> We can give you reasons galore for choosing PharmEasy-</p>
+        <ul>
+            <li> 2 Lac+ happy customers</li>
+            <li> Safe home sample collection</li>
+            <li> Up to 70% OFF</li>
+            <li> Certified & 100% Automated labs</li>
+            <li> Timely and accurate reports</li>
+            <li> 500+ tests and health packs to choose from</li>
+        </ul>
+        <p> Now that you know why PharmEasy can be your trusted diagnostic test booking partner, don’t wait, download
+            the PharmEasy app today and book a health check right away.</p>
+    </div>
+
+
+
+   <!-- faq-section -->
+   <div class="container-fluid">
+    <div class="faq-body">
+        <div class="accordion">
+            <div class="image-box">
+                <img src="../asset/FaqImage.PNG"
+                    alt="">
+            </div>
+            <div class="accordion-text">
+                <div class="title">FAQ Section</div>
+                <ul class="faq-text" id="faq-list">
+                    <!-- FAQ items will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- -------------------------------------------Footer Start---------------------------============== -->
+    <footer>
+        <div class="footer-gray pt-2">
+            <div class="footer-custom">
+                <div class="footer-lists">
+                    <div class="footer-list-wrap">
+                        <h6 class="ftr-hdr">Order Toll Free</h6>
+                        <ul class="ftr-links-sub">
+                            <li><a href="tel:+919598149103">9588149103</a></li>
+                        </ul>
+                        <h6 class="ftr-hdr">Our Services </h6>
+                        <ul class="ftr-links-sub">
+                            <li><a href="" rel="nofollow">Order Medicine</a></li>
+                            <li><a href="http" rel="nofollow"> Healthcare Products</a></li>
+                            <li><a href="http" rel="nofollow"> Lab Tests</a></li>
+                            <li><a href="http" rel="nofollow"> Find Nearest Centre</a></li>
+                        </ul>
+                    </div>
+                    <!--/.footer-list-wrap-->
+                    <div class="footer-list-wrap">
+                        <h6 class="ftr-hdr">Featured Categories </h6>
+                        <ul class="ftr-links-sub">
+                            <li><a href="/help/t" rel="nofollow"> Top Products</a></li>
+                            <li><a href="/help/placin" rel="nofollow"> Elderly Care</a></li>
+                            <li><a href="/help/s" rel="nofollow"> Personal Care</a></li>
+                            <li><a href="/help/shipping" rel="nofollow"> Healthcare Devices</a></li>
+                            <li><a href="/help/international-s" rel="nofollow"> Health Food and Drinks</a></li>
+                            <li><a href="/~/" rel="nofollow"> Skin Care</a></li>
+                            <li><a href="/h" rel="nofollow"> Mother and Baby Care</a></li>
+                            <li><a href="/l" rel="nofollow"> Sexual Wellness</a></li>
+                            <li><a href="/l" rel="nofollow"> Ayurvedic Care</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-list-wrap">
+                        <h6 class="ftr-hdr">Need Help</h6>
+                        <ul class="ftr-links-sub">
+                            <li><a href="/asp/aboutus/dault-asp/_/posters.htm" rel="nofollow"> Browse All
+                                    Medicines</a></li>
+                            <li><a href="http://corporate.MS17.com/careers" rel="nofollow">Browse All
+                                    Molecules</a>
+                            </li>
+                            <li><a href="/asp/landing/aistrising" rel="nofollow"> Browse All Cities</a></li>
+                            <li><a href="/~/art-for-biness" rel="nofollow"> Browse All Areas</a></li>
+                            <li><a href="http://affiliates.MS17.com/index.aspx" rel="nofollow"> Browse All
+                                    Stores</a>
+                            </li>
+                            <li><a href="http://affiates.MS17.com/index.aspx" rel="nofollow"> FAQs</a></li>
+                            <li><a href="/catog" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+                            <li><a href="http://g.MS17.com" rel="nofollow">doctors.com BLOG</a></li>
+                        </ul>
+                    </div>
+                    <!--/.footer-list-wrap-->
+                    <div class="footer-list-wrap">
+                        <h6 class="ftr-hdr">Policy Info</h6>
+                        <ul class="ftr-links-sub">
+                            <li><a href="/asp/aboutus/deft-asp/_/posters.htm" rel="nofollow"> Editorial
+                                    Policy</a>
+                            </li>
+                            <li><a href="http://corporate.MS17.com/careers" rel="nofollow">Privacy Policy</a>
+                            </li>
+                            <li><a href="/asp/landinrtistrising" rel="nofollow"> Vulnerability Policy</a></li>
+                            <li><a href="/~/art-foriness" rel="nofollow"> Terms and Conditions</a></li>
+                            <li><a href="http://affites.MS17.com/index.aspx" rel="nofollow"> Customer Support
+                                    Policy</a></li>
+                            <li><a href="http://afates.MS17.com/index.aspx" rel="nofollow"> Return Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.footer-list-wrap-->
+                </div>
+                <!--/.footer-lists-->
+                <div class="footer-email">
+                    <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+                    <div id="ftr-email" class="ftr-email-form mt-3">
+                        <form id="ftrEmailForm" method="post" action="http://em.MS17.com/pub/rf">
+                            <div class="error">Please enter a valid email address</div>
+                            <input type="text" name="email_address_" id="ftrEmailInput" class="input"
+                                placeholder="Enter email address" />
+                            <!--
+                -->
+                            <input type="submit" class="button" value="SUBMIT" />
+
+                        </form>
+                    </div>
+                    <!--/.ftr-email-form-->
+                    <div class="ftr-email-privacy-policy"></div>
+                </div>
+                <!--/.footer-email-->
+                <div class="footer-social">
+                    <h6 class="ftr-hdr">Follow Us</h6>
+                    <ul class="mt-3">
+                        <li>
+                            <a href="https://www.faccom/MS17.com" title="Facebook">
+                                <img width="24" height="24" alt="Like us on Facebook"
+                                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.08089796661280870153" title="Google+">
+                                <img width="24" height="24" alt="Follow us on Google+"
+                                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pinterest.ctdotcom/" target="_blank">
+                                <img width="24" height="24" alt="Follow us on Pinterest"
+                                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://igram.com/artdotcom/">
+                                <img width="24" height="24" alt="Follow us on Instagram"
+                                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twcom/artdotcom" title="Twitter">
+                                <img width="67" alt="Follow us on Twitter"
+                                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.footer-social-->
+                <div class="footer-legal">
+                    <p>&copy; MS17.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html"
+                            rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms
+                            of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+                    <p>MS17.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of MS17.com
+                        Inc.
+                    </p>
+                    <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other
+                        pending
+                        patent applications.</p>
+                </div>
+                <!--/.footer-legal-->
+                <div class="footer-payment">
+                    <ul>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/gpay.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/phonepe.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/rupay.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/visa.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/mobikwik.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../asset/payment-img/paytm.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.footer-payment-->
+            </div>
+            <!--/.footer-custom-->
+        </div>
+    </footer>
+    <!-- -------------------------------------------Footer End---------------------------============== -->
+
+    <!-- whatsapp link -->
+    <div class="hh">
+        <a href="https://wa.link/94e62n"><img src="../asset/whatsapp/whatsapp.png" alt=""></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- font Awsome -->
+    <script src="https://kit.fontawesome.com/b3263a74b4.js" crossorigin="anonymous"></script>
+</body>
+<!-- pincode Search -->
+<script>
+    function checkServiceAvailability(pincode) {
+        var availablePincodes = ['222001', '110096'];
+        var availableCities = ['jaunpur', 'delhi', 'bihar'];
+        var serviceAvailabilityDiv = document.getElementById('serviceAvailability');
+
+        // Check if the input is a valid 6-digit pincode or a valid city name
+        if (!/^\d{6}$/.test(pincode) && !availableCities.includes(pincode.toLowerCase())) {
+            serviceAvailabilityDiv.innerText = "Please enter a valid pincode or city name";
+            serviceAvailabilityDiv.style.color = "red";
+            return;
+        }
+
+        if (availablePincodes.includes(pincode)) {
+            serviceAvailabilityDiv.innerText = "Service Available";
+            serviceAvailabilityDiv.style.color = "green";
+        } else if (availableCities.includes(pincode.toLowerCase())) {
+            serviceAvailabilityDiv.innerText = "Service Available";
+            serviceAvailabilityDiv.style.color = "green";
+        } else {
+            serviceAvailabilityDiv.innerText = "Service Not Available We are Coming As Soon As Possible";
+            serviceAvailabilityDiv.style.color = "red";
+        }
+    }
+</script>
+
+
+<!--   offer-package-slider -->
+<script>
+
+
+    const carousel = document.querySelector(".carousel"),
+        firstImg = carousel.querySelectorAll("img")[0],
+        arrowIcons = document.querySelectorAll(".wrapper i");
+
+    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+    let autoScrollInterval;
+
+    const showHideIcons = () => {
+        let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+        arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+        arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+    }
+
+    const autoSlide = () => {
+        if (carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1) {
+            carousel.scrollLeft = 0; // Reset scroll position to start
+        } else {
+            carousel.scrollLeft += firstImg.clientWidth + 14;
+        }
+        showHideIcons();
+    }
+
+    const startAutoScroll = () => {
+        autoScrollInterval = setInterval(autoSlide, 5000); // Adjust scroll interval as needed
+    };
+
+    const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+    };
+
+    const dragStart = (e) => {
+        isDragStart = true;
+        prevPageX = e.pageX || e.touches[0].pageX;
+        prevScrollLeft = carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+        if (!isDragStart) return;
+        e.preventDefault();
+        isDragging = true;
+        carousel.classList.add("dragging");
+        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+        carousel.scrollLeft = prevScrollLeft - positionDiff;
+        showHideIcons();
+    }
+
+    const dragStop = () => {
+        isDragStart = false;
+        carousel.classList.remove("dragging");
+
+        if (!isDragging) return;
+        isDragging = false;
+        autoSlide();
+    }
+
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            let firstImgWidth = firstImg.clientWidth + 14;
+            carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+            setTimeout(() => showHideIcons(), 60);
+        });
+    });
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("touchstart", dragStart);
+
+    document.addEventListener("mousemove", dragging);
+    carousel.addEventListener("touchmove", dragging);
+
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("touchend", dragStop);
+
+    startAutoScroll();
+
+</script>
+
+
+<!-- faq section  -->
+<script>
+    const faqItems = [
+    {
+        question: "What is online doctor consultation?",
+        answer: "Online doctor consultation or online medical consultation is a method to connect patients and doctors virtually. It is a convenient and easy way to get online doctor advice using doctor apps or telemedicine apps or platforms, and the internet."
+    },
+    {
+        question: "Are your online doctors qualified?",
+        answer: "We follow a strict verification process for every doctor providing online medical services on A Doctor's Diary. Our team manually verifies necessary documents, registrations, and certifications for every doctor."
+    },
+    {
+        question: "How do I start online consultation with doctors on A Doctor's Diary?",
+        answer: "Starting an online doctor consultation is very simple on A Doctor's Diary. Follow these 4 simple steps: <br> • Choose your health concern <br> • Connect with a doctor within 2 minutes <br> • Ask your queries to the doctor via audio or video call <br> • Get a valid online doctor prescription and a 3-day free <br> online doctor consultation."
+    },
+    {
+        question: "Is online doctor consultation safe and secured on A Doctor's Diary?",
+        answer: "The privacy of our patients is critical to us, and thus, we are compliant with industry standards like ISO 27001. Rest assured that your online consultation with a doctor is completely safe and secured with 256-bit encryption."
+    },
+    {
+        question: "What happens if I don't get a response from a doctor?",
+        answer: "In the unlikely event that an online doctor does not respond, you will be entitled to a 100% refund."
+    },
+    {
+        question: "Can I do a free online doctor consultation on A Doctor's Diary?",
+        answer: "Avail a free online consultation with top doctors in India during the India Health Hour. Click here for more details. We have the free questions service available on our health app only. Ask a question and get free online medical advice within 24 to 48 hours."
+    }
+];
+
+// Function to dynamically populate FAQ items
+function populateFAQ() {
+    const faqList = document.getElementById('faq-list');
+    faqItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+        <div class="question-arrow">
+          <span class="question">${item.question}</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <p>${item.answer}</p>
+        <span class="line"></span>
+      `;
+        faqList.appendChild(listItem);
+    });
+}
+
+// Call the function to populate FAQ items
+populateFAQ();
+
+
+
+// ---------------------------------------------faq section start--------------------------------------------------------->>
+let li = document.querySelectorAll(".faq-text li");
+for (var i = 0; i < li.length; i++) {
+    li[i].addEventListener("click", (e) => {
+        let clickedLi;
+        if (e.target.classList.contains("question-arrow")) {
+            clickedLi = e.target.parentElement;
+        } else {
+            clickedLi = e.target.parentElement.parentElement;
+        }
+        clickedLi.classList.toggle("showAnswer");
+    });
+}
+// ---------------------------------------------faq section End--------------------------------------------------------->>
+
+
+</script>
+</html>

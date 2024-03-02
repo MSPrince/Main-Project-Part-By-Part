@@ -1,0 +1,135 @@
+a {
+    text-decoration: none;
+}
+
+.Frequently-Booked-Lab-Tests-container {
+    display: flex;
+    overflow: auto;
+}
+
+.Frequently-Booked-Lab-Tests-container::-webkit-scrollbar {
+    display: none;
+}
+
+.Frequently-Booked-Lab-Tests {
+
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    height: 294px;
+    width: 262px;
+    padding: 16px;
+    position: relative;
+    margin-right: 40px;
+
+}
+
+.Frequently-Booked-Lab-Tests h4 {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none solid rgb(48, 54, 60);
+    word-spacing: 0px;
+}
+
+.Frequently-Booked-Lab-Tests p {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none solid rgb(110, 120, 126);
+    word-spacing: 0px;
+}
+
+.price {
+    position: absolute;
+    bottom: 10px;
+}
+
+.off {
+    color: red;
+    /* border: 1px solid red; */
+    width: 80px;
+    padding: 5px 3px;
+    text-align: center;
+    background-color: rgb(235, 73, 100);
+    color: white;
+    border-radius: 5px;
+}
+
+.mrp-rate {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.actual-ratee {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.a1 {
+    background: url("../asset/Frequently-Booked-Lab-Tests/01abb07c5b233f90b2cd0b64a7ebccee.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.a2 {
+    background: url("../asset/Frequently-Booked-Lab-Tests/c4162b4ec00938379d15b2719577457e.png");
+      background-size: 100px 100px;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    
+
+}
+.a3 {
+    background: url("../asset/Frequently-Booked-Lab-Tests/4ff607383fad35e4af5639c3e7709734.png");
+    
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
+}
+.a4 {
+    background: url("../asset/Frequently-Booked-Lab-Tests/37ebeeb109543b779c568444f7ce84be.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
+}
+@media (min-width: 576px) {
+    .Frequently-Booked-Lab-Tests {
+        margin: auto;
+        margin-top: 20px;
+        border: 2px solid rgba(0, 0, 0, 0.202);
+    }
+
+
+}
+
+.hj a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 576px) {
+    .Frequently-Booked-Lab-Tests {
+        margin: auto;
+        margin-top: 10px;
+
+    }
+  
+}
+
+@media (max-width: 776px){  
+.three {
+        display: none;
+    }
+
+    .fourth {
+        display: none;
+    }
+}
