@@ -4,10 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   /* Body Styles */
   body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     background-color: #f8f8f8;
     color: #333;
@@ -15,10 +15,35 @@
 
   /* Link Styles */
   a {
-    color: #007bff;
     text-decoration: none;
   }
   
   a:hover {
-    text-decoration: underline;
+    text-decoration:none ;
+  }
+
+
+  /* ========================================================= */
+.superNav{
+    background-color: black;
+    border-bottom: .2px solid #44b5e5;
+}
+  .superNav a{
+    color: white;
+    font-size: 14px;
+}
+  .cu i{
+    color: white;
+  }
+  .navbarr{
+    background-color:black;
+  }
+  .nav-item a{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .nav-item a:hover{
+    color: #44b5e5 !important;
+    font-size: 14px;
   }
