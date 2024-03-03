@@ -1,0 +1,23 @@
+.testimonial-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.testimonial-item img{
+    width: 60px;
+    border-radius: 50%;
+}
+.testimonial-item p {
+    margin-bottom: 10px;
+}
+
+.customer-name {
+    margin-top: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Side Tabs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/testimonial.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .body-test-item {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(141, 223, 226, 0.5), rgba(170, 235, 126, 0.5));
+        }
+
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tab-links {
+            /* background: rgba(255, 255, 255, 0.15); */
+            /* border-radius: 20px; */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: white;
+            padding: 20px;
+            /* min-width: 200px; */
+            /* flex: 1; */
+            /* border: 2px solid red; */
+        }
+
+        .tab-content {
+            flex: 2;
+            padding: 20px;
+            /* border: 2px solid red; */
+            height: 735PX;
+            overflow-y: scroll;
+        }
+
+        .tab-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .test-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .test-item h3 {
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: capitalize;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .test-item h6 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .test-item h6 a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .test-item h6 span {
+            font-weight: 700;
+            font-size: 16px;
+            color: green;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .test-item button {
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #178a869c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .test-item button:hover {
+            background-color: #178a86
+        }
+
+        .tab-links a {
+            display: block;
+            color: rgb(233, 16, 16);
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 5px solid transparent;
+        }
+
+        .tab-links a:hover {
+            border-left: 5px solid rgb(6, 235, 25);
+            background-color: aquamarine;
+            color: red;
+        }
+
+        .tab-content h2 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .tab-container {
+                flex-direction: column;
+            }
+
+            .tab-links {
+                min-width: auto;
+            }
+
+            .tab-content {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .test-item h6 {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--------------------------------------------- navbar Start------------------------------------------------------------ -->
+    <div class="superNav border-bottom py-2 bg-light">
+        <div class="container-fluid">
+             <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+                       <select class="me-3 border-0 bg-light">
+                            <option value="en-us">EN-US</option>
+                            <option value="en-us">HI-IN</option>
+                       </select>
+                       <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
+                            <i class="fa-solid fa-envelope me-1 topbar"></i>
+                            <strong>
+                                 <a href="mailto:maurya.prince06@gmail.com" class="mail">
+                                      maurya.prince06@gmail.com</a>
+    
+                            </strong></span>
+                       <span class="me-3"><i class="fa-solid fa-phone me-1 topbar"></i>
+                            <strong><a href="tel:+91-789-717-3138" class="mobNo"> +91-789-717-3138 </a>
+                            </strong></span>
+                  </div>
+                  <div
+                       class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+                       <span class="me-3"><i class="fa-solid fa-truck topbar me-1"></i><a class="text-muted shipping"
+                                 href="./sample-collection.html">Sample Collection</a></span>
+                  
+                  </div>
+             </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-1 shadow-sm">
+        <div class="container-fluid">
+             <a class="navbar-brand" href="../index.html"><img src="../asset/logo/logo.JPG" alt="" class="logo img-fluid"></a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+             </button>
+    
+             <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ms-auto ">
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="../index.html">Home</a>
+                       </li>
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./lab-test.html">Dignostic Test</a>
+                       </li>
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./aboutus.html">About Us</a>
+                       </li>
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./testimonial.html">Testimonial</a>
+                       </li>
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./contact-us.html">Contact Us</a>
+                       </li>
+                  </ul>
+                  <ul class="navbar-nav ms-auto ">
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./book-appoinment.html">
+                                 <i class="fa-solid fa-calendar-check me-1"></i>
+                                 Book An Appoinment</a>
+                       </li>
+                       <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="./loginpage.html"><i
+                                      class="fa-solid fa-circle-user me-1"></i>
+                                 Account</a>
+                       </li>
+                  </ul>
+             </div>
+        </div>
+    </nav>
+    <!-------------------------------------------- navbar End--------------------------------------------------------------- -->
+    
+
+
+    <!-- =========================================================================== -->
+    <div class="body-test-item">
+        <div class="tab-container">
+            <div class="tab-links">
+                <h2> DIAGNOSTIC TESTS</h2>
+                <a href="#BIOCHEMISTRY"> BIOCHEMISTRY </a>
+                <a href="#IMMUNOLOGY">IMMUNOLOGY</a>
+                <a href="#SEROLOGY&-OTHER-TESTS">SEROLOGY& OTHER TESTS</a>
+                <a href="#URINE ">URINE EXAMINATION</a>
+                <a href="#SEMEN">SEMEN ANALYSIS</a>
+                <a href="#FLUID">C S F / FLUID ASPIRATES</a>
+                <a href="#BACTERIOLOGY">BACTERIOLOGY</a>
+                <a href="#HISTOPATHOLOGY/CYTOLOGY">HISTOPATHOLOGY/CYTOLOGY</a>
+                <a href="#HEMATOLOGY">HEMATOLOGY</a>
+                <a href="#STOOL">STOOL EXAMINATION</a>
+                <a href="#COVID19">COVID19</a>
+            </div>
+            <div class="tab-content">
+                <div id="BIOCHEMISTRY">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Blood Sugar Fasting</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Blood Sugar (PP)</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Blood Sugar (R)</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Blood Urea</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> S. Creatinine</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Uric Acid</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> S. Bilirubin (Total)</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> S. Bilirubin (Direct) </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>total Protein </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Albumin </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> S.G.O.T </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> S.G.P.T</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Alkaline Phosphatase</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> G.G.T.P </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Amylase </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Lipase </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Calcium</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Inorganic Phosphorus</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Cholesterol Total </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Cholesterol Ldl</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Cholesterol Vldl </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Cholesterol Hdl</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Triglyceride </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Apolipoprotein A-1</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Apolipoprotein B </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Sodium </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Potassium </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>
+                                    Chloride
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> C.P.K. (Nac)
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> C.P.K. (Mb)
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3> Acid Phosphatase (Total)
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Acid Phosphatase (Prostatic)
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Creatinine Clearence Test</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T3
+                T4
+                Tsh
+                Ft3
+                Ft4
+                AntiTpo
+                AntiTg
+                VitaminB12
+                VitaminD25Oh
+                Vitamin125Oh
+                Fsh
+                Lh
+                Prolactin
+                17HydroxyProgesterone
+                TestosteroneTotal
+                TestosteroneFree
+                Dheas
+                AntiMullerianHormone
+                BetaHcg
+                Torch
+                Toxoplasma
+                RubellaIgg
+                CmVIgg
+                ApolipoproteinA1 -->
+                <div id="IMMUNOLOGY" style="display: none;">
+                    <h2>Tab 2 Content</h2>
+                    <p>This is the content of Tab 2.</p>
+                </div>
+<!-- Vdrl
+RaFactor
+Crp
+AsoTitre
+AustraliaAntigen(Hbsag)
+Hiv1&2
+SerumC3
+AntiNuclearFactor(Anf)
+WidalTest
+Typhidot
+DengueSerology
+MalarialAntigen
+SerumIga
+SerumIgg
+SerumIgm
+Bicarbonate
+AntiDsDna
+TripleTest
+DoubleMarker
+QuadrupleMarker
+TbPcr(Conventional)
+AntiSpermAntiBody
+AspergillusAntibody
+CysticercusSerology
+LupusAnticoagulant
+ChromosomalAnalysis
+AllergyProfile
+BloodUreaNitrogen
+Erythropoietin
+FilarialAntigen
+HydatidSerology
+Osteocalcin, Serum
+ProteinC&S -->
+
+                <div id="SEROLOGY&-OTHER-TESTS" style="display: none;">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+<!-- UrineForPregnancyTest
+UrineForSugarAndAcetone
+UrineRoutine
+BileSalt
+BilePigment
+UrineUrobilinogen
+BenceJonesProtein
+Albumin
+UricAcid
+Creatinine
+UrineOsmolarity
+UrineForMicroalbumin
+UrineForHaemosiderin
+UrineAmylase
+Catecolamines
+Chloride
+ChlorideRandomUrine
+PregnancyTestUrine
+ProteinCreatinineRatioUrine
+ReducingSubstancesUrine
+UrineForAFB
+UrineForChyle -->
+
+                <div id="URINE" style="display: none;">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+
+
+                <div id="SEMEN" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>MANUAL</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>AUTOMATED
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="FLUID" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>CSF EXAMINATION</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>OTHER BODY FLUIDS
+                                </h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- A.F.B. Culture
+Fungus Culture
+Blood Culture
+Sputum Culture
+Semen Culture
+A.F.B Sensitivity
+A.F.B Culture (Rapid)
+Anaerobic Culture
+Fungus Smear
+Urethral Swab Culture -->
+                <div id="BACTERIOLOGY" style="display: none;">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+
+<!-- SmallSpecimen
+MediumSpecimen
+LargeSpecimen
+ExtraLargeSpecimen
+RadicalOncology
+Immunohistochemistry
+PapSmear
+FNAC -->
+                <div id="HISTOPATHOLOGY/CYTOLOGY" style="display: none;">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+
+<!-- Complete Haemogram
+Haemoglobin
+Total Leucocyte Count
+Differential Leucocyte Count
+Absolute Eosinophil Count
+RBC Count
+MCH
+MCHC
+Packed Cell Volume
+Platelet Count
+Peripheral Smear
+E.S.R (Westergren)
+E.S.R (Wintrobe)
+Blood Group & Rh Factor
+Malarial Parasite
+Microfilaria
+Bleeding Time
+Clotting Time
+Prothrombin Time with INR
+Partial Thromboplastin Time
+Reticulocyte Count
+Osmotic Fragility Test
+Glycosylated Haemoglobin (HbA1c)
+Direct Coomb's Test
+Indirect Coomb's Test
+Clot Retraction Test
+Sickling Test
+Haemoglobin Electrophoresis -->
+                <div id="HEMATOLOGY" style="display: none;">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+
+
+                <div id="STOOL" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>STOOL EXAMINATION</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>STOOL FOR PH & REDUCING SUBSTANCES</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Stool for occult blood</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>STOOL FOR HANGING DROP</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="COVID19" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Covid 19 RT-PCR</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="test-item">
+                                <h3>Covid 19 RT-PCR Home collection</h3>
+                                <h6>
+                                    <a href="">show more</a>
+                                    <span>Rs 100</span>
+                                </h6>
+                                <button>Select Test</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabLinks = document.querySelectorAll(".tab-links a");
+            const tabContents = document.querySelectorAll(".tab-content > div");
+
+            tabLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetTab = document.querySelector(link.getAttribute("href"));
+                    tabContents.forEach(function (tabContent) {
+                        tabContent.style.display = "none";
+                    });
+                    targetTab.style.display = "block";
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
