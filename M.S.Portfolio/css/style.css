@@ -1,49 +1,160 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Body Styles */
-  body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-
-  /* Link Styles */
-  a {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration:none ;
-  }
-
-
-  /* ========================================================= */
-.superNav{
-    background-color: black;
-    border-bottom: .2px solid #44b5e5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  .superNav a{
-    color: white;
-    font-size: 14px;
+
+/* Body Styles */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
 }
-  .cu i{
-    color: white;
+
+/* Link Styles */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* SuperNav Styles */
+.superNav {
+  background-color: black;
+  border-bottom: 0.0125rem solid #44b5e5; /* 0.2px converted to rem */
+}
+
+.superNav a {
+  color: white;
+  font-size: 0.875rem; /* 14px converted to rem */
+}
+
+.cu i {
+  color: white;
+}
+
+/* Navbar Styles */
+.navbarr {
+  background-color: black;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px converted to rem */
+}
+
+.nav-item a {
+  color: white;
+  font-size: 0.875rem; /* 14px converted to rem */
+  font-weight: 600;
+}
+
+.nav-item a:hover {
+  color: #44b5e5 !important;
+  font-size: 0.875rem; /* 14px converted to rem */
+}
+
+/* Animated Background Styles */
+canvas {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.animated-background {
+  /* border: 2px solid red; */
+  height: 80vh;
+  /* height: 31.25rem; 500px converted to rem */
+  width: 100%;
+  position: relative;
+}
+
+/* WhoIam Styles */
+.whoIam {
+  height: auto;
+  position: absolute;
+  top: 2.125rem; /* 50px converted to rem */
+  margin: auto;
+  background: transparent;
+  height: 100%;
+}
+
+.whoIam h4 {
+  font-style: italic;
+  font-size: 2.0rem; /* 56px converted to rem */
+  font-weight: 300;
+  /* line-height: 4.18875rem; 67.02px converted to rem */
+  color: white;
+}
+
+.whoIam h1 {
+  font-size: 3.5rem; /* 80px converted to rem */
+  font-weight: 300;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.whoIam h6 {
+  font-size: 1.5rem; /* 24px converted to rem */
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: lightblue;
+}
+
+.whoIam p {
+  font-size: 1rem; /* 16px converted to rem */
+  color: #fff;
+  text-align: justify;
+}
+
+.whoIam button {
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 0.625rem 1.25rem; /* 10px converted to rem */
+  border-radius: 0.3125rem; /* 5px converted to rem */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 1rem; /* 16px converted to rem */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.whoIam button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.rotate-image {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
   }
-  .navbarr{
-    background-color:black;
+  to {
+      transform: rotate(360deg);
   }
-  .nav-item a{
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
+}
+
+@keyframes freeFall {
+  0%, 100% {
+    transform: translateY(-25%);
   }
-  .nav-item a:hover{
-    color: #44b5e5 !important;
-    font-size: 14px;
+  50% {
+    transform: translateY(-15%);
   }
+}
+
+.free-fall-image {
+  animation: freeFall 5s ease-in-out infinite;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .whoIam img {
+     display: none;
+  }
+}
