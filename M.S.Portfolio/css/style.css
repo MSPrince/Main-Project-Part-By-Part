@@ -15,7 +15,7 @@ body {
 
 /* Link Styles */
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -25,12 +25,14 @@ a:hover {
 /* SuperNav Styles */
 .superNav {
   background-color: black;
-  border-bottom: 0.0125rem solid #44b5e5; /* 0.2px converted to rem */
+  border-bottom: 0.0125rem solid #44b5e5;
+  /* 0.2px converted to rem */
 }
 
 .superNav a {
   color: white;
-  font-size: 0.875rem; /* 14px converted to rem */
+  font-size: 0.875rem;
+  /* 14px converted to rem */
 }
 
 .cu i {
@@ -40,18 +42,21 @@ a:hover {
 /* Navbar Styles */
 .navbarr {
   background-color: black;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px converted to rem */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  /* 4px converted to rem */
 }
 
 .nav-item a {
   color: white;
-  font-size: 0.875rem; /* 14px converted to rem */
+  font-size: 0.875rem;
+  /* 14px converted to rem */
   font-weight: 600;
 }
 
 .nav-item a:hover {
   color: #44b5e5 !important;
-  font-size: 0.875rem; /* 14px converted to rem */
+  font-size: 0.875rem;
+  /* 14px converted to rem */
 }
 
 /* Animated Background Styles */
@@ -74,7 +79,8 @@ canvas {
 .whoIam {
   height: auto;
   position: absolute;
-  top: 2.125rem; /* 50px converted to rem */
+  top: 2.125rem;
+  /* 50px converted to rem */
   margin: auto;
   background: transparent;
   height: 100%;
@@ -82,46 +88,60 @@ canvas {
 
 .whoIam h4 {
   font-style: italic;
-  font-size: 2.0rem; /* 56px converted to rem */
+  font-size: 2.0rem;
+  /* 56px converted to rem */
   font-weight: 300;
   /* line-height: 4.18875rem; 67.02px converted to rem */
   color: white;
 }
 
 .whoIam h1 {
-  font-size: 3.5rem; /* 80px converted to rem */
-  font-weight: 300;
+  font-size: 3.5rem;
+  /* 80px converted to rem */
+  font-weight: 700;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
 }
 
 .whoIam h6 {
-  font-size: 1.5rem; /* 24px converted to rem */
+  font-size: 1.5rem;
+  /* 24px converted to rem */
   font-weight: 500;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: lightblue;
 }
 
 .whoIam p {
-  font-size: 1rem; /* 16px converted to rem */
+  font-size: 1.4rem;
+  /* 16px converted to rem */
   color: #fff;
   text-align: justify;
 }
 
 .whoIam button {
-  background-color: #007bff; /* Blue background color */
-  color: white; /* White text color */
-  border: none; /* No border */
-  padding: 0.625rem 1.25rem; /* 10px converted to rem */
-  border-radius: 0.3125rem; /* 5px converted to rem */
-  cursor: pointer; /* Show pointer cursor on hover */
-  font-size: 1rem; /* 16px converted to rem */
-  text-transform: uppercase; /* Uppercase text */
-  transition: background-color 0.3s; /* Smooth color transition */
+  background-color: #007bff;
+  /* Blue background color */
+  color: white;
+  /* White text color */
+  border: none;
+  /* No border */
+  padding: 0.625rem 1.25rem;
+  /* 10px converted to rem */
+  border-radius: 0.3125rem;
+  /* 5px converted to rem */
+  cursor: pointer;
+  /* Show pointer cursor on hover */
+  font-size: 1rem;
+  /* 16px converted to rem */
+  text-transform: uppercase;
+  /* Uppercase text */
+  transition: background-color 0.3s;
+  /* Smooth color transition */
 }
 
 .whoIam button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
 
 .rotate-image {
@@ -130,17 +150,21 @@ canvas {
 
 @keyframes rotate {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes freeFall {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-25%);
   }
+
   50% {
     transform: translateY(-15%);
   }
@@ -155,6 +179,275 @@ canvas {
 
 @media (max-width: 767px) {
   .whoIam img {
-     display: none;
+    display: none;
   }
+}
+
+
+/*====================================== About me section */
+.ab-sec {
+  background-color: #000000;
+  background: url("https://img.freepik.com/premium-vector/wave-line-gradient-minimalist-color-style_483537-3498.jpg?w=1060");
+  background-size: 100% 100%;
+  border-top: .1px solid rgba(255, 255, 255, 0.486);
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .ab-sec {
+    text-align: center;
+  }
+
+.picc-2{
+  left: 80% !important;
+}
+  .picc-4 {
+    left: 80% !important;
+  }
+
+  .picc-2 {
+    position: absolute;
+    top: -40px;
+    left: 160px;
+    border-radius: 50%;
+    /* z-index: -1; */
+  }
+}
+
+.me-img {
+  position: relative;
+}
+
+.me-img img {
+  border-radius: 50%;
+}
+.my-img{
+  height: 100%;
+  width: 350px;
+}
+
+
+.picc-1 {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  width: 80px;
+  /* z-index: -1; */
+}
+
+.picc-2 {
+  position: absolute;
+  top: -16px;
+  left: 240px;
+  border-radius: 50%;
+  /* z-index: -1; */
+}
+
+.picc-3 {
+  position: absolute;
+  top: 260px;
+  left: 15px;
+  border-radius: 50%;
+  width: 60px;
+}
+
+.picc-4 {
+  position: absolute;
+  top: 260px;
+  left: 260px;
+  border-radius: 50%;
+  width: 60px;
+}
+
+.about-us-detail h1 {
+  color: red;
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  top: -27px;
+  left: 30%;
+  background-color: #000000;
+}
+
+.about-us-detail p{
+  text-align: justify;
+  color: white;
+  font-size: 13px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #caced3;
+  color: rgb(216, 14, 14);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/*====================techonology============= */
+.techonology {
+  background: url("https://img.freepik.com/free-vector/background-line-abstract-luxury-gradient_483537-3301.jpg?w=1060&t=st=1709610514~exp=1709611114~hmac=b66af7a9a9724dabcb4b365e34d007eeee8e73e8a4619cb040106df7eb572d28");
+  background-size: 100% 100%;
+  position: relative;
+  border-top: .1px solid rgba(255, 255, 255, 0.492);
+  /* border: 2px solid red; */
+}
+
+.techonology h1{
+  color: red;
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  top: -27px;
+  left: 30%;
+  background-color: #000000;
+}
+
+/* CSS */
+.neuromorphic-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 0 10px 10px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5), 0 0 60px rgba(0, 0, 255, 0.5);
+}
+
+.neuromorphic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.5), transparent);
+  transition: 0.5s;
+}
+
+.neuromorphic-button:hover::before {
+  left: 100%;
+}
+
+
+.contact-us{
+  background: url("https://img.freepik.com/free-vector/background-line-abstract-luxury-gradient_483537-3301.jpg?w=1060&t=st=1709610514~exp=1709611114~hmac=b66af7a9a9724dabcb4b365e34d007eeee8e73e8a4619cb040106df7eb572d28");
+  background-size: 100% 100%;
+  position: relative;
+  border-top: .1px solid rgba(255, 255, 255, 0.492);
+}
+
+.contact-us h1{
+  color: red;
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  top: -27px;
+  left: 30%;
+  background-color: #00000070;
+  margin: 0 5px;
+}
+
+.contact-us-1 p{
+   color: white;
+   font-weight: 300;
+}
+.contact-us-1 h5{
+  color: white;
+  font-weight: 700;
+}
+
+.bg-transparent{
+  width: 500px;
+  padding: 10px 20px;
+  border: 2px solid red;
+  background-color: rgba(255, 255, 255, 0.062);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.bg-transparent img{
+  width: 40px;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+.contact-form{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  padding: 30px 15px 0 30px;
+}
+
+.formm{
+  background: rgba(255, 255, 255, 0.059);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formm input{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formm textarea{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.246);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formm input::placeholder{
+  color: white;
+  font-size: 10px;
+}
+.formm textarea::placeholder{
+  color: white;
+  font-size: 10px;
+}
+
+
+.footer-container{
+  background: url("https://img.freepik.com/free-vector/gradient-luxury-background_23-2148985090.jpg");
+  background-size: 100% 100%;
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin-bottom: -40px;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer img{
+  width: 120px;
+}
+.footer p{
+  color: white;
 }
