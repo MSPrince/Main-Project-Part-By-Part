@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
   background-color: #f8f8f8;
   color: #333;
+  cursor: url("../asset/cursor/Screenshot_2024-03-05_211633-removebg-preview.png");
 }
 
 /* Link Styles */
@@ -69,7 +70,7 @@ canvas {
 
 .animated-background {
   /* border: 2px solid red; */
-  height: 80vh;
+  height: 85vh;
   /* height: 31.25rem; 500px converted to rem */
   width: 100%;
   position: relative;
@@ -102,6 +103,9 @@ canvas {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
 }
+
+
+
 
 .whoIam h6 {
   font-size: 1.5rem;
@@ -437,7 +441,7 @@ canvas {
   background-size: 100% 100%;
   /* border: 2px solid red; */
   padding: 10px;
-  margin-bottom: -40px;
+  /* margin-bottom: -40px; */
 }
 .footer{
   display: flex;
@@ -450,4 +454,17 @@ canvas {
 }
 .footer p{
   color: white;
+}
+
+table {
+  border-collapse: collapse;
+  color: white;
+  background-color: transparent;
+  /* width: 50%; */
+  /* margin: 20px auto; */
+}
+td {
+  border: 1px solid transparent;
+  padding: 8px;
+  text-align: left;
 }
