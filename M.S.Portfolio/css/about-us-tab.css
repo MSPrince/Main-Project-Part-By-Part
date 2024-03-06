@@ -143,3 +143,18 @@ dt {
       display: none !important;
     }
   }
+
+  .experienceee div ul li{
+    color: white;
+    line-height: 22px;
+    margin-top: 14px;
+    list-style: num;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .experienceee div ul { 
+  list-style: square;
+  font-size: 16px;
+  color: yellow;
+ }
