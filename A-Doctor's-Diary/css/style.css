@@ -175,7 +175,8 @@ a{
      /* border: 2px solid yellow; */
      padding: 0 59px;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
+     gap: 20px;
 }
 
 .product-list {
@@ -185,6 +186,16 @@ a{
    cursor: pointer;
 }
 
+@media (min-width: 760px) { 
+  .product{
+     flex-wrap: nowrap;
+     overflow: scroll;
+      padding: 0px;
+  }
+  .product::-webkit-scrollbar{
+    display: none;
+  }
+}
 .product-list:hover{
    /* border: .2px solid rgba(83, 79, 79, 0.91); */
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -349,7 +360,21 @@ a{
 
 
 
+.heading-mainn{
+  font-size: 30px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
 
+.heading-mainn:hover{
+  -webkit-background-clip: text;
+  /* three major properity */
+  background-clip: text;
+ background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2620.jpg?t=st=1709747239~exp=1709750839~hmac=376bfd090ccd522d6682ae399ad0301f15a594e7adc5987348de6d9b8091c204&w=900);
+  background-position: center;
+  color: transparent;
+  cursor: pointer;
+}
 
 
 

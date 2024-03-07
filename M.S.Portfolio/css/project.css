@@ -8,8 +8,8 @@
     background-size: 100% 100%;
 }
 
-.project {
-    /* Add styles as needed */
+.project a{
+  /* display: none; */
 }
 
 .project h1 {
@@ -27,16 +27,42 @@
     border: 1px solid rgb(252, 249, 249);
 }
 
+.main-ppjjtt img{
+    height: 400px !important;
+}
+
 .project-item img {
     width: 100%;
     border-radius: 10px;
     border: 1px solid rgb(252, 249, 249);
 }
  .project-detail p{
-    
+     color: white;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .date{
+    color: yellow;
+    font-size: 19px;
  }
 
+ .project-detail p:hover{
+    -webkit-background-clip: text;
+    /* three major properity */
+    background-clip: text;
+   background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2620.jpg?t=st=1709747239~exp=1709750839~hmac=376bfd090ccd522d6682ae399ad0301f15a594e7adc5987348de6d9b8091c204&w=900);
+    background-position: center;
+    color: transparent;
+ }
 
+ .date:hover{
+    -webkit-background-clip: text;
+    /* three major properity */
+    background-clip: text;
+   background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2620.jpg?t=st=1709747239~exp=1709750839~hmac=376bfd090ccd522d6682ae399ad0301f15a594e7adc5987348de6d9b8091c204&w=900);
+    background-position: center;
+    color: transparent;
+ }
 .use-skill {
     display: flex;
     justify-content: space-around;
@@ -45,7 +71,7 @@
     margin-top: 10px;
 }
 
-.use-skill a {
+.use-skill >a {
     display: inline-block;
     height: 28px;
     padding: 4px 8px;
