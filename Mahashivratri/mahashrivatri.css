@@ -1,0 +1,185 @@
+
+* {
+  background: rgb(245, 196, 196);
+}
+
+.main {
+  background: none;
+  height: 800px;
+  width: 100%;
+}
+
+.shiv-ling {
+  background: #000;
+  height: 20px;
+  width: 20px;
+  filter: drop-shadow(30px -20px 40px #4444dd);
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 315px;
+  left: 50%;
+  border-radius: 150px 150px 30px 30px;
+  border-top: 120px solid #000;
+  border-bottom: 120px solid #000;
+  border-left: 100px solid #000;
+  border-right: 100px solid #000;
+}
+
+.one {
+  background: silver;
+  height: 10px;
+  width: 100px;
+  border-radius: 10px;
+  position: relative;
+  left: -200%;
+}
+
+.two {
+  background: silver;
+  height: 10px;
+  width: 100px;
+  border-radius: 10px;
+  position: relative;
+  left: -200%;
+  top: 17%;
+}
+
+.three {
+  background: silver;
+  height: 10px;
+  width: 100px;
+  border-radius: 10px;
+  position: relative;
+  left: -200%;
+  top: -65%;
+  z-index: -1;
+}
+
+.red-dot {
+  background: red;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  z-index: 1;
+  top: -60%;
+  border-radius: 10px;
+  border: 5px solid darkred;
+}
+
+.oval-stand {
+  background: #000;
+  height: 50px;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  position: relative;
+  box-shadow: 5px 70px #000;
+  border-radius: 40%;
+  z-index: 1;
+  top: 24%;
+  left: 50%;
+}
+
+.block-fill {
+  background: #000;
+  height: 80px;
+  width: 400px;
+  position: relative;
+  top: 10%;
+  left: 0%;
+  border-radius: 30px 30px 150px 150px;
+  border-left: 5px solid rgba(44, 44, 44, 0.8);
+  border-right: 5px solid rgba(44, 44, 44, 0.8);
+  border-bottom: 5px solid rgba(44, 44, 44, 0.8);
+  border-top: 5px solid rgba(44, 44, 44, 0.8);
+}
+
+@keyframes abhishekam {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+
+  20% {
+    transform: scale(1) rotate(45deg);
+  }
+
+  90% {
+    transform: scale(1) translateY(110px) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(230px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: kruti dev;
+  src: url("assets/text-font/K010.TTF") format("truetype");
+}
+
+p.mahamantra {
+  font-family: kruti dev;
+  font-size: 120px;
+  position: relative;
+  left: 0vh;
+  top: 20px;
+  text-align: center;
+  color: silver;
+  font-weight: 900;
+  margin-top: -30px;
+  margin-bottom: -0px;
+
+  -webkit-background-clip: text;
+/* three major properity */
+background-clip: text;
+background-image: url(https://t4.ftcdn.net/jpg/05/67/13/79/360_F_567137962_V5ar7JYFPdOnAs7ZuOgjTUkIamCfSI7k.jpg);
+background-position: center;
+color: transparent;
+}
+
+.matki {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -115px;
+  z-index: 7676;
+}
+
+.urdhva {
+  border: 1px solid orange;
+  border-width: 5px 6px 0 6px;
+  border-color: orange transparent transparent transparent;
+}
+
+.madhya {
+  width: 50px;
+  height: 40px;
+  background: orange;
+  transform: translateY(-5px);
+  border-radius: 50%;
+}
+
+.drop {
+  width: 30px;
+  height: 30px;
+  border-radius: 0 50% 50% 50%;
+  background: skyblue;
+  transform: rotate(45deg);
+  margin-left: 12.5px;
+  z-index: -1;
+  animation: abhishekam 4s ease-in infinite;
+}
+
+.thread {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 2px;
+  height: 275px; /* Assuming $size was meant to be 200 */
+  background-color: transparent; /* Use background-color instead of background */
+  color: red;
+  z-index: 4;
+  border: 2px solid red;
+}
