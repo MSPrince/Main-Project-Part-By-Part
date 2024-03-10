@@ -56,13 +56,17 @@ https://msprince.github.io/css-blob-homage-to-the-blob-movie-titles/
 
 https://msprince.github.io/can-has-connect-4/
 
-
-
 https://majestic-paprenjak-fcc8fa.netlify.app/
 
-
-
 https://cheery-beijinho-54d007.netlify.app/
+
+
+=========================================================================================
+https://msprince.github.io/Typing-Text-Effect/
+
+https://msprince.github.io/Autocomplete-Search-Suggestions/
+
+https://msprince.github.io/Preview-Image-Before-Upload-in-HTML-CSS-JavaScript/
 
 
 

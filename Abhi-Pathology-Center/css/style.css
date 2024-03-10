@@ -300,3 +300,48 @@ line-height: 33.75px;
 .what a img{
   width: 70px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================== */
+@media screen and (orientation: landscape) {
+  .rotate-device-message {
+      display: block;
+  }
+}
+
+.rotate-device-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}

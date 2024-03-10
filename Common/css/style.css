@@ -1,0 +1,71 @@
+/* --------------------------------------------Some common css --------------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Set a background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+ul {
+    list-style-type: disc; /* Unordered list with bullet points */
+    list-style-position: outside; /* Marker outside the list item box */
+    list-style-image: url('bullet.png'); /* Custom bullet image */
+    list-style: square inside url('bullet.png'); /* Square bullets inside the list item box with a custom image */
+    display: inline-block; /* Displays list items inline with block layout */
+}
+
+ol {
+    list-style-type: decimal; /* Ordered list with numbers */
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*-------------------------------------------- common media query------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for screens between 768px and 1024px wide */
+}
+
+@media screen and (orientation: landscape) {
+    /* Styles for landscape orientation */
+}
+
+@media screen and (orientation: portrait) {
+    /* Styles for portrait orientation */
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Styles for high-resolution displays (Retina) */
+}
+
+@media print {
+    /* Styles for printing */
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    /* Styles for dark mode */
+}
+
+@media screen and (aspect-ratio: 16/9) {
+    /* Styles for screens with a 16:9 aspect ratio */
+}
+
+@media (hover: hover) and (pointer: fine) {
+    /* Styles for devices that support hover and have a fine pointer */
+}
+
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles for specific devices like iPhone 5/SE */
+}
